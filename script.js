@@ -11,6 +11,8 @@ let naoConcluido3 = document.getElementById('naoConcluido3')
 let naoConcluido4 = document.getElementById('naoConcluido4')
 let naoConcluido5 = document.getElementById('naoConcluido5')
 
+semana2.style.display = 'none'
+
 semana2.onclick = function () {
 
     window.location = 'semana2.html'

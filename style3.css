@@ -1,0 +1,2960 @@
+*{
+
+    margin: 40px;
+    margin-top: 0;
+}
+
+
+#duracao{
+
+    border-top: orangered 2px solid;
+    border-left: orangered 2px solid;
+    border-right: orangered 2px solid;    
+    border-bottom: orangered 2px solid;
+    background-color: rgb(39, 37, 37);
+    color: orangered;
+    height: 50px;
+    width: 100px;
+    font-size: 20px;
+    padding: 10px;
+    padding-left: 2px;
+    position: absolute;
+    top: 400px;
+    left: 500px;
+    
+    cursor: pointer;
+
+
+}
+#video1 {
+
+    position: absolute;
+    top: 580px;
+    cursor: pointer;
+    left: 750px;
+    z-index: 50;
+    width: 550px;
+    display: none;
+    
+}
+
+
+
+#play {
+    width: 25px;
+    position: absolute;
+    left: 85px;
+    top: 20px;
+    cursor: pointer;
+    
+    
+    
+}
+
+#pause {
+
+    width: 25px;
+    position: absolute;
+    left: 85px;
+    top: 20px;
+    display: none;
+    cursor: pointer;
+
+
+}
+
+#mais {
+
+    width: 25px;
+    position: absolute;
+    left: 140px;
+    top: 20px;
+    cursor: pointer;
+
+
+
+}
+#speed{
+
+    width: 25px;
+    position: absolute;
+    left: 200px;
+    top: 20px;
+    cursor: pointer;
+}
+
+
+
+#menos {
+
+    width: 25px;
+    position: absolute;
+    left: 40px;
+    top: 20px;
+    cursor: pointer;
+
+
+
+}
+
+#camada1 {
+
+    background-color: rgb(70, 65, 64);
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    position: absolute;
+    top: 450px;
+    left: 700px;
+    cursor: pointer;
+    box-shadow: 0px 0px 40px black;
+}
+
+
+
+#click {
+
+    margin-top: 50px;
+}
+
+#andamento {
+
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    left: 78px;
+    top: 5px;
+}
+
+#base{
+
+    position: absolute;
+    top: 510px;
+    left: 500px;
+    display: none;
+
+}
+
+
+
+#menuH{
+
+    background-color: orangered;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    position: absolute;
+    right: -20px;
+    top: 5px;
+    cursor: pointer;
+    
+
+}
+
+#menuH1{
+
+    
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    position: absolute;
+    right: -20px;
+    top: 5px;
+    cursor: pointer;
+    z-index: 10;
+    
+
+}
+
+
+
+#h1::first-letter{
+
+    font-size: 40px;
+    
+
+
+}
+
+
+
+.linha{
+
+    width: 20px;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    right: -8px;
+}
+
+#linha1{
+
+    top: 15px;
+}
+
+#linha2{
+
+    top: 23px;
+}
+
+#linha3{
+
+    top: 31px;
+}
+
+
+
+#timerSvg{
+
+    width: 50px;
+    position: absolute;
+    top: 400px;
+    left: 600px;
+    cursor: pointer;   
+    
+}
+
+#listaSemanas{
+
+    position: absolute;
+    transition: all 2s;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    list-style: none;
+    padding-top: 20px;
+    padding-left: 0;
+    margin: 0;
+    top: -630px;
+    left: 0px;
+    background-image: linear-gradient(to top, rgb(39, 38, 38), rgb(99, 97, 97), rgb(70, 68, 68), rgb(20, 20, 20));
+    border-radius: 10px;
+    width: 500px;       
+    margin-right: 0;
+    z-index: 50;
+    box-shadow: -15px 10px 4px rgba(0, 0, 0, 0.637);
+
+
+}
+#listaSemanas li{
+
+    height: 40px;
+    border-radius: 5px;
+    width: 480px;
+    padding: 10px;
+    margin-left: 0;
+
+
+}
+
+#listaSemanas li:hover{
+
+    background-color: orangered;
+    cursor: pointer;
+    animation: pisca 0.5s linear infinite;
+      
+    
+    
+}
+
+
+#listaSemanas li:active{
+
+    
+    animation: pisca 0.5s linear infinite;  
+    
+    
+}
+
+#calendario{
+
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 50px;
+    cursor: pointer;
+}
+
+#aviso{
+
+    background-color: rgb(31, 29, 29);
+    color: orangered;
+    font-size: 20px;
+    width: 400px;
+    height: 100px;
+    border-radius: 10px;
+    position: absolute;
+    top: 300px;
+    left: 600px;
+    z-index: 10;
+    display: none;
+    transition: all 2s;
+}
+
+
+
+@keyframes timer{
+
+    0%{
+
+        width: 0;
+        background-color: greenyellow;
+    }
+
+    50%{
+
+        background-color: orangered;
+    }
+
+   
+
+    100%{
+
+        width: 600px;
+        background-color: red;
+    }
+
+
+}
+
+#timer{
+
+    
+    background-color: red;
+    
+    width: 600px;
+    height: 30px;
+    border-radius: 10px;
+    position: absolute;
+    top: 410px;
+    left: 650px;
+    
+    
+}
+#praticarComVideo{
+
+    display: none;
+}
+
+#barra{
+
+    
+    background-image: linear-gradient(to top, rgb(119, 118, 118), rgb(218, 216, 216), black, rgb(161, 153, 153));
+    width: 600px;
+    height: 30px;
+    border-radius: 10px;
+    position: absolute;
+    top: 410px;
+    left: 650px;
+    box-shadow: black inset 0 2px;
+    
+    
+}
+
+@keyframes pisca {
+
+    50%{
+
+        background-color:   rgb(51, 49, 49);
+    }
+}
+
+@keyframes pisca2 {
+
+    50%{
+
+        background-color:   rgb(6, 234, 241);
+    }
+}
+
+#ex1 {
+
+    background-color:  rgb(51, 49, 49);
+}
+
+.nota{
+
+    
+    background-image: linear-gradient(45deg, greenyellow, rgb(146, 201, 63) , rgb(161, 201, 102), rgb(136, 197, 45) );
+}
+
+.nota:hover{
+
+    
+    background-image: linear-gradient(-45deg, blue, rgb(143, 143, 243), rgb(71, 71, 243), blue);
+}
+
+
+h1{
+
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+    
+    text-shadow: black 1px 1px;
+    color: orangered;
+    
+    
+}
+
+@keyframes setas {
+
+    50%{
+
+        transform: scale(1.3);
+        opacity: 0.5;
+    }
+}
+
+.setas{
+
+            
+    color: orangered;
+    font-size: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+    cursor: pointer;
+   
+
+}
+
+#esquerda{
+
+    position: absolute;
+    top: 20px;
+    left: 550px;
+    text-shadow: 3px 2px 3px black;
+}
+
+#direita{
+
+    position: absolute;
+    top: 20px;
+    left: 800px;
+    text-shadow: 3px 2px 3px black;
+}
+
+
+
+#botao1 {
+
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 14px;
+    left: 300px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+
+
+#video {
+
+    position: absolute;
+    top: 580px;
+    right: -25px;
+    border-radius: 10px;
+    display: none;
+}
+
+h2{
+
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+}
+
+#inputVideo {
+
+    height: 30px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px;
+    width: 200px;
+}
+.menu {
+
+    list-style: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0;
+    
+}
+
+.opcoes {
+
+    display: none;
+}
+
+#backMenu{
+
+    background-color: rgb(112, 112, 112);
+    height: 50px;
+    width: 1000px;
+    position: absolute;
+    top: 9px;
+}
+
+#acordes{
+
+    position: absolute;
+    top: 10px;
+    left: 400px;
+    font-weight: bold;
+    color: rgb(250, 95, 6);   
+    background-color: rgb(43, 42, 42);   
+    height: 39px;
+    width: 160px;
+    padding-top: 10px;
+    padding-left: 60px;
+   
+}
+
+
+
+
+#pestana {
+
+    background-color:rgb(11, 11, 88);
+    height: 263px;
+    width: 15px;
+    border-radius: 5px;
+    position: absolute;
+    top: 95px;
+    display: none;
+}    
+
+
+#acordes:hover{
+
+    background-color: black;
+    cursor: pointer;
+   
+}
+
+#arpejos:hover{
+
+    background-color: black;
+    cursor: pointer;
+   
+}
+
+#escalas:hover{
+
+    background-color: black;
+    cursor: pointer;
+   
+}
+
+#arpejos{
+
+    position: absolute;
+    top: 10px;
+    left: 600px;
+    font-weight: bold;
+    color: whitesmoke;   
+    background-color: rgb(112, 112, 112);   
+    height: 39px;
+    width: 160px;
+    padding-top: 10px;
+    padding-left: 60px;
+    
+}
+
+#escalas{
+
+    position: absolute;
+    top: 10px;
+    left: 800px;
+    font-weight: bold;
+    color: whitesmoke;  
+    background-color: rgb(112, 112, 112);   
+    height: 39px;
+    width: 160px;
+    padding-top: 10px;
+    padding-left: 60px;
+    
+}
+
+
+body{
+
+    background-color: rgb(238, 234, 234);
+}
+
+
+
+#corda1 {
+    
+    left: 120px;
+    border-radius: 5px;
+    background-image: linear-gradient(to top, rgb(119, 118, 118), rgb(218, 216, 216), black, rgb(161, 153, 153));   
+    height: 3px;
+    width: 1200px;
+    position: absolute;
+    top: 100px;
+    cursor: pointer;
+    
+    
+    
+          
+
+}
+
+#corda1:hover{
+
+    background-color:yellow;
+    animation: pisca 0.5s linear infinite;
+    
+}
+#corda6:hover{
+
+    background-color:yellow;
+    animation: pisca 0.5s linear infinite;
+}
+#corda2:hover{
+
+    background-color:rgb(139, 14, 133);
+    animation: pisca 0.5s linear infinite;
+}
+#corda3:hover{
+
+    background-color:rgb(0, 225, 255);
+    animation: pisca 0.5s linear infinite;
+}
+#corda4:hover{
+
+    background-color:rgb(255, 174, 0);
+    animation: pisca 0.5s linear infinite;
+}
+#corda5:hover{
+
+    background-color:rgb(11, 24, 204);
+    animation: pisca 0.5s linear infinite;
+}
+
+
+
+#corda2 {
+    
+    left: 120px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-image: linear-gradient(to top, rgb(119, 118, 118), rgb(218, 216, 216), black, rgb(161, 153, 153));
+    
+    height: 4px;
+    width: 1200px;
+    position: absolute;
+    top: 150px;   
+    
+}
+
+#corda3 {
+    
+    left: 120px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-image: linear-gradient(to top, rgb(119, 118, 118), rgb(218, 216, 216), black, rgb(161, 153, 153));
+    
+    height: 5px;
+    width: 1200px;
+    position: absolute;
+    top: 200px;
+    
+}
+
+#corda4 {
+    
+    left: 120px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-image: linear-gradient(to top, rgb(119, 118, 118), rgb(218, 216, 216), black, rgb(161, 153, 153));
+    
+    height: 6px;
+    width: 1200px;
+    position: absolute;
+    top: 250px;
+    
+}
+
+#corda5 {
+    
+    left: 120px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-image: linear-gradient(to top, rgb(119, 118, 118), rgb(218, 216, 216), black, rgb(161, 153, 153));
+    
+    height: 7px;
+    width: 1200px;
+    position: absolute;
+    top: 300px;
+    
+}
+
+#fret{
+
+    height: 460px;
+    position: absolute;
+    top: 36px;
+    left: -40px;
+    width: 1500px;
+    z-index: -5;
+    opacity: 0.9;
+}
+
+#corda6 {
+    
+    left: 120px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-image: linear-gradient(to top, rgb(119, 118, 118), rgb(218, 216, 216), black, rgb(161, 153, 153));   
+    height: 8px;
+    width: 1200px;
+    position: absolute;
+    top: 350px;
+    
+}
+
+#traste1 {
+
+    
+    height: 250px;
+    
+    width: 3px;
+    position: absolute;
+    top: 100px;
+    background-color: rgb(214, 214, 12);
+    background-image: linear-gradient(to right, rgb(168, 168, 24), rgb(196, 196, 55), rgb(173, 173, 12));
+    
+    
+    
+
+}
+
+#traste2 {
+
+    background-color: rgb(214, 214, 12);   
+    height: 250px;
+    background-image: linear-gradient(to right, rgb(168, 168, 24), rgb(196, 196, 55), rgb(173, 173, 12));
+    
+    width: 3px;
+    position: absolute;
+    top: 100px;
+    left: 200px;
+
+}
+
+#traste3 {
+
+    background-color: rgb(214, 214, 12);    
+    height: 250px;
+    background-image: linear-gradient(to right, rgb(168, 168, 24), rgb(196, 196, 55), rgb(173, 173, 12));
+    
+    width: 3px;
+    position: absolute;
+    top: 100px;
+    left: 280px;
+
+}
+
+
+
+#traste4 {
+
+    background-color: rgb(214, 214, 12);    
+    height: 250px;
+    background-image: linear-gradient(to right, rgb(168, 168, 24), rgb(196, 196, 55), rgb(173, 173, 12));
+    
+    width: 3px;
+    position: absolute;
+    top: 100px;
+    left: 360px;
+
+}
+
+#traste5 {
+
+    background-color: rgb(214, 214, 12);   
+    height: 250px;
+    background-image: linear-gradient(to right, rgb(168, 168, 24), rgb(196, 196, 55), rgb(173, 173, 12));
+    
+    width: 3px;
+    position: absolute;
+    top: 100px;
+    left: 440px;
+
+}
+
+#traste6 {
+
+    background-color: rgb(214, 214, 12);    
+    height: 250px;
+    background-image: linear-gradient(to right, rgb(168, 168, 24), rgb(196, 196, 55), rgb(173, 173, 12));
+    
+    width: 3px;
+    position: absolute;
+    top: 100px;
+    left: 520px;
+
+}
+
+#traste7 {
+
+    background-color: rgb(214, 214, 12);    
+    height: 250px;
+    background-image: linear-gradient(to right, rgb(168, 168, 24), rgb(196, 196, 55), rgb(173, 173, 12));
+    
+    width: 3px;
+    position: absolute;
+    top: 100px;
+    left: 600px;
+
+}
+
+#traste8 {
+
+    background-color: rgb(214, 214, 12);    
+    height: 250px;
+    background-image: linear-gradient(to right, rgb(168, 168, 24), rgb(196, 196, 55), rgb(173, 173, 12));
+    
+    width: 3px;
+    position: absolute;
+    top: 100px;
+    left: 680px;
+
+}
+
+#traste9 {
+
+    background-color: rgb(214, 214, 12);  
+    height: 250px;
+    animation: gira 6s linear;
+    width: 3px;
+    background-image: linear-gradient(to right, rgb(168, 168, 24), rgb(196, 196, 55), rgb(173, 173, 12));
+    
+    position: absolute;
+    top: 100px;
+    left: 760px;
+
+}
+
+#traste10 {
+
+    background-color: rgb(214, 214, 12);   
+    animation: gira 6s linear;
+    height: 250px;
+    width: 3px;
+    position: absolute;
+    background-image: linear-gradient(to right, rgb(168, 168, 24), rgb(196, 196, 55), rgb(173, 173, 12));
+    
+    top: 100px;
+    left: 840px;
+
+}
+
+#traste11 {
+
+    background-color: rgb(214, 214, 12);   
+    height: 250px;
+    background-image: linear-gradient(to right, rgb(168, 168, 24), rgb(196, 196, 55), rgb(173, 173, 12));
+    
+    width: 3px;
+    
+    position: absolute;
+    top: 100px;
+    left: 920px;
+
+}
+
+#traste12 {
+
+    background-color: rgb(214, 214, 12);   
+    background-image: linear-gradient(to right, rgb(168, 168, 24), rgb(196, 196, 55), rgb(173, 173, 12));
+    
+    height: 250px;
+    
+    width: 3px;
+    position: absolute;
+    top: 100px;
+    left: 1000px;
+
+}
+
+#traste13 {
+
+    background-color: rgb(214, 214, 12);  
+    background-image: linear-gradient(to right, rgb(168, 168, 24), rgb(196, 196, 55), rgb(173, 173, 12));
+    
+    height: 250px;
+    
+    width: 3px;
+    position: absolute;
+    top: 100px;
+    left: 1080px;
+
+}
+
+#traste14 {
+
+    background-color: rgb(214, 214, 12);  
+    height: 250px;
+    background-image: linear-gradient(to right, rgb(168, 168, 24), rgb(196, 196, 55), rgb(173, 173, 12));
+    
+    width: 3px;
+    position: absolute;
+    top: 100px;
+    left: 1160px;
+
+}
+
+#traste15 {
+
+    background-color: rgb(214, 214, 12);   
+    height: 250px;
+    width: 3px;
+    background-image: linear-gradient(to right, rgb(168, 168, 24), rgb(196, 196, 55), rgb(173, 173, 12));
+    
+    position: absolute;
+    top: 100px;
+    left: 1240px;
+
+}
+
+#corda6_casa0{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 330px;
+    left: 60px;
+    transition: all 2s;
+    
+}
+
+
+
+#corda6_casa1{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 330px;
+    left: 140px;
+    transition: all 2s;
+}
+
+#corda6_casa2{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    transition: all 2s;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 330px;
+    left: 220px;
+}
+
+#corda6_casa3{
+
+    background-color: gray;
+    font-size: 20px;
+    transition: all 2s;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 330px;
+    left: 300px;
+}
+
+#corda6_casa4{
+
+    background-color: gray;
+    font-size: 20px;
+    transition: all 2s;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 330px;
+    left: 380px;
+}
+
+#corda6_casa5{
+
+    background-color: gray;
+    font-size: 20px;
+    transition: all 2s;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 330px;
+    left: 460px;
+}
+
+#corda6_casa6{
+
+    background-color: gray;
+    font-size: 20px;
+    transition: all 2s;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 330px;
+    left: 540px;
+}
+
+#corda6_casa7{
+
+    background-color: gray;
+    font-size: 20px;
+    transition: all 2s;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 330px;
+    left: 620px;
+}
+
+#corda6_casa8{
+
+    background-color: gray;
+    font-size: 20px;
+    transition: all 2s;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 330px;
+    left: 700px;
+}
+
+#corda6_casa9{
+
+    background-color: gray;
+    font-size: 20px;
+    transition: all 2s;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 330px;
+    left: 780px;
+}
+
+#corda6_casa10{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    transition: all 2s;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 330px;
+    left: 860px;
+}
+
+#corda6_casa11{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    transition: all 2s;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 330px;
+    left: 940px;
+}
+
+#corda6_casa12{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    transition: all 2s;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 330px;
+    left: 1020px;
+}
+
+#corda6_casa13{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    transition: all 2s;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 330px;
+    left: 1100px;
+}
+
+#corda6_casa14{
+
+    background-color: gray;
+    font-size: 20px;
+    transition: all 2s;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 330px;
+    left: 1180px;
+}
+
+#corda6_casa15{
+
+    background-color: gray;
+    font-size: 20px;
+    transition: all 2s;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 330px;
+    left: 1260px;
+}
+
+#corda5_casa0{
+
+    background-color: gray;
+    font-size: 20px;
+    transition: all 2s;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 280px;
+    left: 60px;
+}
+
+#corda5_casa1{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 280px;
+    left: 140px;
+}
+
+#corda5_casa2{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 280px;
+    left: 220px;
+}
+
+#corda5_casa3{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 280px;
+    left: 300px;
+}
+
+#corda5_casa4{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 280px;
+    left: 380px;
+}
+
+#corda5_casa5{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 280px;
+    left: 460px;
+}
+
+#corda5_casa6{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 280px;
+    left: 540px;
+}
+
+#corda5_casa7{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 280px;
+    left: 620px;
+}
+
+#corda5_casa8{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 280px;
+    left: 700px;
+}
+
+#corda5_casa9{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 280px;
+    left: 780px;
+}
+
+#corda5_casa10{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 280px;
+    left: 860px;
+}
+
+#corda5_casa11{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 280px;
+    left: 940px;
+}
+
+#corda5_casa12{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 280px;
+    left: 1020px;
+}
+
+#corda5_casa13{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 280px;
+    left: 1100px;
+}
+
+#corda5_casa14{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 280px;
+    left: 1180px;
+}
+
+#corda5_casa15{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 280px;
+    left: 1260px;
+}
+
+#corda4_casa0{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 230px;
+    left: 60px;
+}
+
+#corda4_casa1{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 230px;
+    left: 140px;
+}
+
+#corda4_casa2{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 230px;
+    left: 220px;
+}
+
+#corda4_casa3{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 230px;
+    left: 300px;
+}
+
+#corda4_casa4{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 230px;
+    left: 380px;
+}
+
+#corda4_casa5{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 230px;
+    left: 460px;
+}
+
+#corda4_casa6{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 230px;
+    left: 540px;
+}
+
+#corda4_casa7{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 230px;
+    left: 620px;
+}
+
+#corda4_casa8{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 230px;
+    left: 700px;
+}
+
+#corda4_casa9{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 230px;
+    left: 780px;
+}
+
+#corda4_casa10{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 230px;
+    left: 860px;
+}
+
+#corda4_casa11{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 230px;
+    left: 940px;
+}
+
+#corda4_casa12{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 230px;
+    left: 1020px;
+}
+
+#corda4_casa13{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 230px;
+    left: 1100px;
+}
+
+#corda4_casa14{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 230px;
+    left: 1180px;
+}
+
+#corda4_casa15{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 230px;
+    left: 1260px;
+}
+
+#corda3_casa0{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 180px;
+    left: 60px;
+}
+
+#corda3_casa1{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 180px;
+    left: 140px;
+}
+
+#corda3_casa2{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 180px;
+    left: 220px;
+}
+
+#corda3_casa3{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 180px;
+    left: 300px;
+}
+
+#corda3_casa4{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 180px;
+    left: 380px;
+}
+
+#corda3_casa5{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 180px;
+    left: 460px;
+}
+
+#corda3_casa6{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 180px;
+    left: 540px;
+}
+
+#corda3_casa7{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 180px;
+    left: 620px;
+}
+
+#corda3_casa8{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 180px;
+    left: 700px;
+}
+
+#corda3_casa9{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 180px;
+    left: 780px;
+}
+
+#corda3_casa10{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 180px;
+    left: 860px;
+}
+
+#corda3_casa11{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 180px;
+    left: 940px;
+}
+
+#corda3_casa12{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 180px;
+    left: 1020px;
+}
+
+#corda3_casa13{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 180px;
+    left: 1100px;
+}
+
+#corda3_casa14{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 180px;
+    left: 1180px;
+}
+
+#corda3_casa15{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 180px;
+    left: 1260px;
+}
+
+#corda2_casa0{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 130px;
+    left: 60px;
+}
+
+#corda2_casa1{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 130px;
+    left: 140px;
+}
+
+#corda2_casa2{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 130px;
+    left: 220px;
+}
+
+#corda2_casa3{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 130px;
+    left: 300px;
+}
+
+#corda2_casa4{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 130px;
+    left: 380px;
+}
+
+#corda2_casa5{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 130px;
+    left: 460px;
+}
+
+#corda2_casa6{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 130px;
+    left: 540px;
+}
+
+#corda2_casa7{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 130px;
+    left: 620px;
+}
+
+#corda2_casa8{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 130px;
+    left: 700px;
+}
+
+#corda2_casa9{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 130px;
+    left: 780px;
+}
+
+#corda2_casa10{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 130px;
+    left: 860px;
+}
+
+#corda2_casa11{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 130px;
+    left: 940px;
+}
+
+#corda2_casa12{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 130px;
+    left: 1020px;
+}
+
+#corda2_casa13{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 130px;
+    left: 1100px;
+}
+
+#corda2_casa14{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 130px;
+    left: 1180px;
+}
+
+#corda2_casa15{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 130px;
+    left: 1260px;
+}
+
+#corda1_casa0{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 80px;
+    left: 60px;
+}
+
+#corda1_casa1{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 80px;
+    left: 140px;
+}
+
+#corda1_casa2{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 80px;
+    left: 220px;
+}
+
+#corda1_casa3{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 80px;
+    left: 300px;
+}
+
+#corda1_casa4{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 80px;
+    left: 380px;
+}
+
+#corda1_casa5{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 80px;
+    left: 460px;
+}
+
+#corda1_casa6{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 80px;
+    left: 540px;
+}
+
+#corda1_casa7{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 80px;
+    left: 620px;
+}
+
+#corda1_casa8{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 80px;
+    left: 700px;
+}
+
+#corda1_casa9{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 80px;
+    left: 780px;
+}
+
+#corda1_casa10{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 80px;
+    left: 860px;
+}
+
+#corda1_casa11{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 80px;
+    left: 940px;
+}
+
+#corda1_casa12{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 80px;
+    left: 1020px;
+}
+
+#corda1_casa13{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 80px;
+    left: 1100px;
+}
+
+#corda1_casa14{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 80px;
+    left: 1180px;
+}
+
+#corda1_casa15{
+
+    background-color: gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 80px;
+    left: 1260px;
+}
+
+#limpar {
+
+    border-top: orangered 2px solid;
+    border-left: orangered 2px solid;
+    border-bottom: orangered 2px solid;
+    background-color: rgb(39, 37, 37);
+    color: orangered;
+    height: 50px;
+    width: 100px;
+    font-size: 30px;
+    padding: 10px;
+    position: absolute;
+    top: 400px;
+    
+    cursor: pointer;
+}
+
+
+
+#mostrar {
+
+    border-top: orangered 2px solid;
+    border-right: orangered 2px solid;
+    border-bottom: orangered 2px solid;
+    background-color: rgb(39, 37, 37);
+    color: orangered;
+    height: 50px;
+    width: 200px;
+    font-size: 30px;
+    padding: 10px;
+    
+    cursor: pointer;
+    position: absolute;
+    top: 400px;
+    left: 200px;
+
+
+
+}
+
+
+
+#input {
+
+    height: 50px;
+    width: 300px;
+    font-size: 30px;
+    font-family:'Courier New', Courier, monospace;
+    position: absolute;
+    top: 410px;
+    left: 600px;
+    border-radius: 10px;
+    background-color: black;
+    color: greenyellow;
+    font-weight: bold;
+}
+
+#botao{
+
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    font-family:'Courier New', Courier, monospace;
+    position: absolute;
+    top: 470px;
+    left: 660px;
+    background-color:rgb(65, 65, 102);
+    color: wheat;
+    font-weight: bold;
+    
+}
+
+#corda1_casa0:hover, #corda1_casa1:hover, #corda1_casa2:hover, #corda1_casa3:hover, #corda1_casa4:hover, #corda1_casa5:hover, #corda1_casa6:hover, #corda1_casa7:hover, #corda1_casa8:hover, #corda1_casa9:hover, #corda1_casa10:hover, #corda1_casa11:hover, #corda1_casa12:hover, #corda1_casa13:hover, #corda1_casa14:hover, #corda1_casa15:hover {
+
+    background-color: royalblue;
+    cursor: pointer;
+}
+
+#corda2_casa0:hover, #corda2_casa1:hover, #corda2_casa2:hover, #corda2_casa3:hover, #corda2_casa4:hover, #corda2_casa5:hover, #corda2_casa6:hover, #corda2_casa7:hover, #corda2_casa8:hover, #corda2_casa9:hover, #corda2_casa10:hover, #corda2_casa11:hover, #corda2_casa12:hover, #corda2_casa13:hover, #corda2_casa14:hover, #corda2_casa15:hover {
+
+    background-color: royalblue;
+    cursor: pointer;
+}
+
+#corda3_casa0:hover, #corda3_casa1:hover, #corda3_casa2:hover, #corda3_casa3:hover, #corda3_casa4:hover, #corda3_casa5:hover, #corda3_casa6:hover, #corda3_casa7:hover, #corda3_casa8:hover, #corda3_casa9:hover, #corda3_casa10:hover, #corda3_casa11:hover, #corda3_casa12:hover, #corda3_casa13:hover, #corda3_casa14:hover, #corda3_casa15:hover {
+
+    background-color: royalblue;
+    cursor: pointer;
+}
+
+
+
+#corda6_casa0:hover, #corda6_casa1:hover, #corda6_casa2:hover, #corda6_casa3:hover, #corda6_casa4:hover, #corda6_casa5:hover, #corda6_casa6:hover, #corda6_casa7:hover, #corda6_casa8:hover, #corda6_casa9:hover, #corda6_casa10:hover, #corda6_casa11:hover, #corda6_casa12:hover, #corda6_casa13:hover, #corda6_casa14:hover, #corda6_casa15:hover {
+
+    background-color: royalblue;
+    cursor: pointer;
+}
+
+#corda4_casa0:hover, #corda4_casa1:hover, #corda4_casa2:hover, #corda4_casa3:hover, #corda4_casa4:hover, #corda4_casa5:hover, #corda4_casa6:hover, #corda4_casa7:hover, #corda4_casa8:hover, #corda4_casa9:hover, #corda4_casa10:hover, #corda4_casa11:hover, #corda4_casa12:hover, #corda4_casa13:hover, #corda4_casa14:hover, #corda4_casa15:hover {
+
+    background-color: royalblue;
+    cursor: pointer;
+}
+
+#corda5_casa0:hover, #corda5_casa1:hover, #corda5_casa2:hover, #corda5_casa3:hover, #corda5_casa4:hover, #corda5_casa5:hover, #corda5_casa6:hover, #corda5_casa7:hover, #corda5_casa8:hover, #corda5_casa9:hover, #corda5_casa10:hover, #corda5_casa11:hover, #corda5_casa12:hover, #corda5_casa13:hover, #corda5_casa14:hover, #corda5_casa15:hover {
+
+    background-color: royalblue;
+    cursor: pointer;
+}
+
+#limpar:hover{
+
+    background-color: orangered;
+    color: black;
+}
+
+#mostrar:hover{
+
+    background-color: orangered;
+    color: black;
+}
+
+#tipo:hover{
+
+    background-color: orangered;
+    color: black;
+}
+
+#tonalidade:hover{
+
+    background-color: orangered;
+    color: black;
+}
+
+#posicao:hover{
+
+    background-color: orangered;
+    color: black;
+}
+
+#estrutura:hover{
+
+    background-color: orangered;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+#botao0{
+ 
+    
+    height: 52px;
+    width: 50px;
+    font-size: 30px;
+    font-family:'Courier New', Courier, monospace;
+    position: absolute;
+    top: 509px;
+    left: 980px;
+    border-top: orangered 2px solid;
+    border-left: orangered 2px solid;
+    border-right: orangered 2px solid;
+    border-bottom: orangered 2px solid;
+    background-color: rgb(39, 37, 37);
+    color: orangered;
+    font-weight: bold;
+    
+}
+
+#bolinha1 {
+
+    background-color: rgb(49, 48, 48);
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    position: absolute;
+    top: 220px;
+    left: 310px;
+    z-index: -1;
+    transition: none;
+}
+
+#bolinha2 {
+
+    background-color: rgb(49, 48, 48);
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    position: absolute;
+    top: 220px;
+    transition: none;
+
+    left: 470px;
+    z-index: -1;
+}
+
+#bolinha3 {
+
+    background-color: rgb(49, 48, 48);
+    height: 20px;
+    transition: none;
+
+    width: 20px;
+    border-radius: 20px;
+    position: absolute;
+    top: 220px;
+    left: 630px;
+    z-index: -1;
+}
+
+#bolinha4 {
+
+    background-color: rgb(49, 48, 48);
+    height: 20px;
+    transition: none;
+
+    width: 20px;
+    border-radius: 20px;
+    position: absolute;
+    top: 220px;
+    left: 790px;
+    z-index: -1;
+}
+
+
+
+#bolinha5 {
+
+    background-color: rgb(49, 48, 48);
+    height: 20px;
+    transition: none;
+
+    width: 20px;
+    border-radius: 20px;
+    position: absolute;
+    top: 170px;
+    left: 1030px;
+    z-index: -1;
+}
+
+#bolinha6 {
+
+    background-color: rgb(49, 48, 48);
+    height: 20px;
+    width: 20px;
+    transition: none;
+
+    border-radius: 20px;
+    position: absolute;
+    top: 270px;
+    left: 1030px;
+    z-index: -1;
+}
+
+#tonalidade {
+
+    
+    position: absolute;
+    top: 510px;
+    left: 700px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 1s;
+    border-top: orangered 2px solid;
+    border-bottom: orangered 2px solid;
+    background-color: rgb(39, 37, 37);
+    color: orangered;
+    
+}
+
+
+
+#estrutura {
+
+    
+    position: absolute;
+    top: 510px;
+    left: 400px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 2s;
+    border-left: orangered 2px solid;
+    border-top: orangered 2px solid;
+    border-bottom: orangered 2px solid;
+    background-color: rgb(39, 37, 37);
+    color: orangered;
+    
+}
+
+
+
+#posicao {
+
+    
+    position: absolute;
+    cursor: pointer;
+    top: 510px;
+    left: 824px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    border-right: orangered 2px solid;
+    border-left:  rgb(39, 37, 37) 2px solid;
+    border-top: orangered 2px solid;
+    border-bottom: orangered 2px solid;
+    background-color: rgb(39, 37, 37);
+    color: orangered;
+    
+}
+
+
+
+#tipo {
+
+    
+    position: absolute;
+    cursor: pointer;
+    top: 510px;
+    left: 510px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 1s;
+    border-right:  rgb(39, 37, 37) 2px solid;
+    border-left:  rgb(39, 37, 37) 2px solid;
+    border-top: orangered 2px solid;
+    border-bottom: orangered 2px solid;
+    background-color: rgb(39, 37, 37);
+    color: orangered;
+    
+}
+
+
+
+#listaEx {
+
+    position: absolute;
+    top: 630px;
+    right: 100px;
+    display: none;
+}
+
+#lista {
+
+    position: absolute;
+    top: -580px;
+    right: 10px;
+    background-image: linear-gradient(to top, rgb(39, 38, 38), rgb(99, 97, 97), rgb(70, 68, 68), rgb(20, 20, 20));
+    border-radius: 10px;
+    width: 550px;       
+    margin-right: 0;
+    transition: all 2s;
+    z-index: 50;
+    box-shadow: -15px 10px 4px rgba(0, 0, 0, 0.637);
+}
+
+@keyframes aparecer{
+
+    0%{
+
+        top: -500px;
+    }
+
+
+
+}
+
+#moldura {
+
+    border: 4px rgb(255, 0, 0) solid;
+    border-radius: 10px;
+    height: 300px;
+    width: 380px;
+    position: absolute;
+    background-color: rgba(50, 55, 56, 0.315);
+    top: 80px;
+    z-index: -5;
+    left: 100px;
+    display: none;
+    transition: all 2s;
+    box-shadow: 10px 10px 5px black;
+    
+    
+}
+
+#lista{
+
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    list-style: none;
+    padding-top: 20px;
+    padding-left: 0;
+    margin: 0;
+}
+
+#lista li{
+
+    height: 40px;
+    border-radius: 5px;
+    width: 480px;
+    padding: 10px;
+    padding-left: 50px;
+    margin-left: 0;
+
+}
+
+#lista li:hover{
+
+    background-color: orangered;
+    cursor: pointer;
+    animation: pisca 0.5s linear infinite;
+      
+    
+    
+}
+
+
+#lista li:active{
+
+    
+    animation: pisca 0.5s linear infinite;  
+    
+    
+}
+
+#pdf{
+
+    position: absolute;
+    top: 580px;
+    left: -10px;
+    margin-left: 0;
+    display: none;
+}
+
+#posicao1, #posicao2, #posicao3, #posicao4, #posicao5{
+ 
+    position: absolute;
+    top: 45px;
+    color: white;
+    height: 30px;
+    border-radius: 5px;
+    background-color: grey;
+    display: none;
+} 
+
+#posicao1 {
+
+    left: 120px;
+}
+
+#posicao2 {
+
+    left: 200px;
+}
+
+#posicao3 {
+
+    left: 280px;
+}
+
+#posicao4 {
+
+    left: 360px;
+}
+
+
+
+#posicao5 {
+
+    left: 440px;
+}
+
+#fret{
+
+    background-color: white;
+    width: 1200px;
+    height: 260px;
+    position: absolute;
+    top: 100px;
+    left: 120px;
+    background-image: url('fret1.svg');
+    
+    z-index: 10;
+    box-shadow: 0px 0px 70px black;
+    
+}
+
+#naoConcluido1 {
+
+    border: 2px solid gray;
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(185, 176, 176);
+    position: absolute;
+    top: 10px;
+    left: 1200px;
+    display: none;
+    cursor: pointer;
+    z-index: 0;
+}
+
+
+#concluido1 {
+
+    width: 35px;
+    position: absolute;
+    top: 10px;
+    display: none;
+    left: 1200px;
+    cursor: pointer;
+    z-index: 0;
+}
+
+#naoConcluido2 {
+
+    border: 2px solid gray;
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(185, 176, 176);
+    position: absolute;
+    top: 10px;
+    left: 1200px;
+    display: none;
+    cursor: pointer;
+    z-index: 0;
+}
+
+
+#concluido2 {
+
+    width: 35px;
+    position: absolute;
+    top: 10px;
+    display: none;
+    left: 1200px;
+    cursor: pointer;
+    z-index: 0;
+}
+
+#naoConcluido3 {
+
+    border: 2px solid gray;
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(185, 176, 176);
+    position: absolute;
+    top: 10px;
+    left: 1200px;
+    display: none;
+    cursor: pointer;
+    z-index: 0;
+}
+
+
+#concluido3 {
+
+    width: 35px;
+    position: absolute;
+    top: 10px;
+    display: none;
+    left: 1200px;
+    cursor: pointer;
+    z-index: 0;
+}
+
+#naoConcluido4 {
+
+    border: 2px solid gray;
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(185, 176, 176);
+    position: absolute;
+    top: 10px;
+    left: 1200px;
+    display: none;
+    cursor: pointer;
+    z-index: 0;
+}
+
+
+#concluido4 {
+
+    width: 35px;
+    position: absolute;
+    top: 10px;
+    display: none;
+    left: 1200px;
+    cursor: pointer;
+    z-index: 0;
+}
+
+#naoConcluido5 {
+
+    border: 2px solid gray;
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(185, 176, 176);
+    position: absolute;
+    top: 10px;
+    left: 1200px;
+    display: none;
+    cursor: pointer;
+    z-index: 0;
+}
+
+
+#concluido5 {
+
+    width: 35px;
+    position: absolute;
+    top: 10px;
+    display: none;
+    left: 1200px;
+    cursor: pointer;
+    z-index: 0;
+}
+
+.arpejos {
+
+    cursor: pointer;
+}
+
+.card{
+
+    border-top: orangered 2px solid;
+    border-left: orangered 2px solid;
+    border-right: orangered 2px solid;    
+    border-bottom: orangered 2px solid;
+    background-color: rgb(39, 37, 37);
+    color: orangered;
+
+    
+    width: 300px;
+    
+
+
+    font-size: 20px;
+    padding: 10px;
+    padding-left: 2px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    
+    cursor: pointer;
+}

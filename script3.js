@@ -9,36 +9,15 @@ let naoConcluido2 = document.getElementById('naoConcluido2')
 let naoConcluido3 = document.getElementById('naoConcluido3')
 let naoConcluido4 = document.getElementById('naoConcluido4')
 let naoConcluido5 = document.getElementById('naoConcluido5')
+let semana4 = document.getElementById('semana4')
 
+semana4.onclick = function () {
 
-
-let semana3 = document.getElementById('semana3')
-
-
-
-
-
-
-semana3.onclick = function () {
-
-    window.location = 'semana3.html'
+    window.location = 'semana4.html'
 
 }
 
 
-
-let semana2 = document.getElementById('semana2')
-
-
-
-
-
-
-semana2.onclick = function () {
-
-    window.location = 'semana2.html'
-
-}
 
 
 
@@ -7089,3 +7068,47 @@ function card(titulo, dica) {
 let dicaPausa = card('Hora da pausa', 'Uns minutinhos de pausa cairiam bem hein? Tomar uma água, ir ao banheiro, só não vale ir pro facebook, whatsapp e CIA hein. Bons estudos!')
 
 setTimeout(dicaPausa.mostrarCard, 1000*30*60)
+
+
+let cronograma = document.getElementById('cronograma')
+
+cronograma.onchange = function () {
+
+     if(cronograma.value == 'semana1'){
+
+        window.location = 'index.html'
+
+
+     } else if(cronograma.value == 'semana2'){
+
+        window.location = 'semana2.html'
+
+
+     } else if(cronograma.value == 'semana3'){
+
+        window.location = 'semana3.html'
+
+
+     } else if(cronograma.value == 'semana4'){
+
+        window.location = 'semana4.html'
+
+
+     } else if(cronograma.value == 'semana5'){
+
+        window.location = 'semana5.html'
+
+
+     } else if(cronograma.value == 'musica1'){
+
+        window.location = 'still.html'
+
+
+     } else if(cronograma.value == 'bonus1'){
+
+        window.location = 'fouraxis.html'
+
+
+     }
+
+}

@@ -1,17 +1,27 @@
+let cordaAtual = 0
 let duracao = document.getElementById('duracao')
 let concluido1 = document.getElementById('concluido1')
 let concluido2 = document.getElementById('concluido2')
 let concluido3 = document.getElementById('concluido3')
 let concluido4 = document.getElementById('concluido4')
 let concluido5 = document.getElementById('concluido5')
+
 let semana2 = document.getElementById('semana2')
+let semana3 = document.getElementById('semana3')
+let semana4 = document.getElementById('semana4')
 let naoConcluido1 = document.getElementById('naoConcluido1')
 let naoConcluido2 = document.getElementById('naoConcluido2')
 let naoConcluido3 = document.getElementById('naoConcluido3')
 let naoConcluido4 = document.getElementById('naoConcluido4')
 let naoConcluido5 = document.getElementById('naoConcluido5')
-let semana3 = document.getElementById('semana3')
 
+
+
+semana4.onclick = function () {
+
+    window.location = 'semana4.html'
+
+}
 
 
 semana2.onclick = function () {
@@ -19,7 +29,6 @@ semana2.onclick = function () {
     window.location = 'semana2.html'
 
 }
-
 
 semana3.onclick = function () {
 
@@ -348,11 +357,7 @@ console.log('Cordas: ' + corda.length)
 console.log('Casas: ' + traste.length)
 
 
-document.onclick = function () {
 
-    console.log('X: ' + event.clientX + '\n' + 'Y: ' + event.clientY)
-
-}
 
 still.onclick = function () {
 
@@ -377,7 +382,7 @@ calendario.onclick = function () {
 
 listaSemanas.onmouseleave = function () {
 
-    listaSemanas.style.top = '-580px'
+    listaSemanas.style.top = '-630px'
 
 }
 
@@ -1743,6 +1748,10 @@ ex1.onclick = function () {
     pdf.style.display = 'inline'
     video1.style.display = 'inline'
     base.style.display = 'none'
+    let dica0 = card('Dica', 'Lembrar de manter a palhetada sempre alternada.')
+
+    setTimeout(dica0.mostrarCard, 5000)
+
 
 
 
@@ -4488,7 +4497,7 @@ for (i = 0; i < corda.length; i++) {
 
 
     corda[i].style.zIndex = 11
-    corda[i].style.transition = 'all 2s'
+
 
 
 }
@@ -4496,7 +4505,7 @@ for (i = 0; i < corda.length; i++) {
 for (i = 0; i < traste.length; i++) {
 
     traste[i].style.zIndex = 11
-    traste[i].style.transition = 'all 2s'
+
 
 
 }
@@ -4505,7 +4514,7 @@ for (i = 0; i < nota.length; i++) {
 
 
     nota[i].style.zIndex = 13
-    nota[i].style.transition = 'all 2s'
+
 
 }
 
@@ -5207,9 +5216,16 @@ function markSelection() {
     }
 }
 
+
+
 for (i = 0; i < nota.length; i++) {
     nota[i].onclick = markSelection;
+
+
+
 }
+
+
 
 
 function bass(cordas) {
@@ -5358,43 +5374,1915 @@ function criaShapePenta(a, b, c, d, e, f, g, h, i, j, k, l) {
 
 }
 
-for (i = 0; i < nota.length; i++) {
-
-    if (nota[i].innerHTML == 'C#'){
-
-        nota[i].innerHTML = 'Db'
 
 
-    }
-
-    if (nota[i].innerHTML == 'D#'){
-
-        nota[i].innerHTML = 'Eb'
+//--------------------------------------------------------------------------------------------------------------------------
 
 
-    }
+function colorNote(note, cor) {
 
-    if (nota[i].innerHTML == 'F#'){
+    for (i = 0; i < nota.length; i++) {
 
-        nota[i].innerHTML = 'Gb'
+        if (nota[i].innerHTML == note) {
+
+            nota[i].style.backgroundColor = cor
+            nota[i].style.backgroundImage = 'none'
+
+
+        }
 
 
     }
 
-    if (nota[i].innerHTML == 'G#'){
+}
 
-        nota[i].innerHTML = 'Ab'
+function enarmonia(note0, note1) {
+
+    for (i = 0; i < nota.length; i++) {
+
+        if (nota[i].innerHTML == note0) {
+
+            nota[i].innerHTML = note1
+
+
+        }
+
+
+    }
+}
+
+function intervalos(tonica) {
+
+    for (i = 0; i < nota.length; i++) {
+
+        if (tonica == 'C') {
+
+
+
+
+            if (nota[i].innerHTML == 'C') {
+
+                nota[i].innerHTML = 'T'
+
+
+            } else if (nota[i].innerHTML == 'C#' || nota[i].innerHTML == 'Db') {
+
+                nota[i].innerHTML = 'b2'
+
+
+            } else if (nota[i].innerHTML == 'D') {
+
+                nota[i].innerHTML = '2'
+
+
+            } else if (nota[i].innerHTML == 'D#') {
+
+                nota[i].innerHTML = '#2'
+
+
+            } else if (nota[i].innerHTML == 'Eb') {
+
+                nota[i].innerHTML = 'b3'
+
+
+            } else if (nota[i].innerHTML == 'E') {
+
+                nota[i].innerHTML = '3'
+
+
+            } else if (nota[i].innerHTML == 'F') {
+
+                nota[i].innerHTML = '4'
+
+
+            } else if (nota[i].innerHTML == 'F#') {
+
+                nota[i].innerHTML = '#4'
+
+
+            } else if (nota[i].innerHTML == 'Gb') {
+
+                nota[i].innerHTML = 'b5'
+
+
+            } else if (nota[i].innerHTML == 'G') {
+
+                nota[i].innerHTML = '5'
+
+
+            } else if (nota[i].innerHTML == 'G#') {
+
+                nota[i].innerHTML = '#5'
+
+
+            } else if (nota[i].innerHTML == 'Ab') {
+
+                nota[i].innerHTML = 'b6'
+
+
+            } else if (nota[i].innerHTML == 'A') {
+
+                nota[i].innerHTML = '6'
+
+
+            } else if (nota[i].innerHTML == 'A#') {
+
+                nota[i].innerHTML = '#6'
+
+
+            } else if (nota[i].innerHTML == 'Bb') {
+
+                nota[i].innerHTML = 'b7'
+
+
+            } else if (nota[i].innerHTML == 'B') {
+
+                nota[i].innerHTML = '7'
+
+
+            }
+
+
+        } else if (tonica == 'G') {
+
+
+
+
+            if (nota[i].innerHTML == 'G') {
+
+                nota[i].innerHTML = 'T'
+
+
+            } else if (nota[i].innerHTML == 'G#' || nota[i].innerHTML == 'Ab') {
+
+                nota[i].innerHTML = 'b2'
+
+
+            } else if (nota[i].innerHTML == 'A') {
+
+                nota[i].innerHTML = '2'
+
+
+            } else if (nota[i].innerHTML == 'A#') {
+
+                nota[i].innerHTML = '#2'
+
+
+            } else if (nota[i].innerHTML == 'Bb') {
+
+                nota[i].innerHTML = 'b3'
+
+
+            } else if (nota[i].innerHTML == 'B') {
+
+                nota[i].innerHTML = '3'
+
+
+            } else if (nota[i].innerHTML == 'C') {
+
+                nota[i].innerHTML = '4'
+
+
+            } else if (nota[i].innerHTML == 'C#') {
+
+                nota[i].innerHTML = '#4'
+
+
+            } else if (nota[i].innerHTML == 'Db') {
+
+                nota[i].innerHTML = 'b5'
+
+
+            } else if (nota[i].innerHTML == 'D') {
+
+                nota[i].innerHTML = '5'
+
+
+            } else if (nota[i].innerHTML == 'D#') {
+
+                nota[i].innerHTML = '#5'
+
+
+            } else if (nota[i].innerHTML == 'Eb') {
+
+                nota[i].innerHTML = 'b6'
+
+
+            } else if (nota[i].innerHTML == 'E') {
+
+                nota[i].innerHTML = '6'
+
+
+            } else if (nota[i].innerHTML == 'E#') {
+
+                nota[i].innerHTML = '#6'
+
+
+            } else if (nota[i].innerHTML == 'F') {
+
+                nota[i].innerHTML = 'b7'
+
+
+            } else if (nota[i].innerHTML == 'F#') {
+
+                nota[i].innerHTML = '7'
+
+
+            }
+
+
+        } else if (tonica == 'D') {
+
+
+
+
+            if (nota[i].innerHTML == 'D') {
+
+                nota[i].innerHTML = 'T'
+
+
+            } else if (nota[i].innerHTML == 'D#' || nota[i].innerHTML == 'Eb') {
+
+                nota[i].innerHTML = 'b2'
+
+
+            } else if (nota[i].innerHTML == 'E') {
+
+                nota[i].innerHTML = '2'
+
+
+            } else if (nota[i].innerHTML == 'E#') {
+
+                nota[i].innerHTML = '#2'
+
+
+            } else if (nota[i].innerHTML == 'F') {
+
+                nota[i].innerHTML = 'b3'
+
+
+            } else if (nota[i].innerHTML == 'F#') {
+
+                nota[i].innerHTML = '3'
+
+
+            } else if (nota[i].innerHTML == 'G') {
+
+                nota[i].innerHTML = '4'
+
+
+            } else if (nota[i].innerHTML == 'G#') {
+
+                nota[i].innerHTML = '#4'
+
+
+            } else if (nota[i].innerHTML == 'Ab') {
+
+                nota[i].innerHTML = 'b5'
+
+
+            } else if (nota[i].innerHTML == 'A') {
+
+                nota[i].innerHTML = '5'
+
+
+            } else if (nota[i].innerHTML == 'A#') {
+
+                nota[i].innerHTML = '#5'
+
+
+            } else if (nota[i].innerHTML == 'Bb') {
+
+                nota[i].innerHTML = 'b6'
+
+
+            } else if (nota[i].innerHTML == 'B') {
+
+                nota[i].innerHTML = '6'
+
+
+            } else if (nota[i].innerHTML == 'B#') {
+
+                nota[i].innerHTML = '#6'
+
+
+            } else if (nota[i].innerHTML == 'C') {
+
+                nota[i].innerHTML = 'b7'
+
+
+            } else if (nota[i].innerHTML == 'C#') {
+
+                nota[i].innerHTML = '7'
+
+
+            }
+
+
+        } else if (tonica == 'A') {
+
+
+
+
+            if (nota[i].innerHTML == 'A') {
+
+                nota[i].innerHTML = 'T'
+
+
+            } else if (nota[i].innerHTML == 'A#' || nota[i].innerHTML == 'Bb') {
+
+                nota[i].innerHTML = 'b2'
+
+
+            } else if (nota[i].innerHTML == 'B') {
+
+                nota[i].innerHTML = '2'
+
+
+            } else if (nota[i].innerHTML == 'B#') {
+
+                nota[i].innerHTML = '#2'
+
+
+            } else if (nota[i].innerHTML == 'C') {
+
+                nota[i].innerHTML = 'b3'
+
+
+            } else if (nota[i].innerHTML == 'C#') {
+
+                nota[i].innerHTML = '3'
+
+
+            } else if (nota[i].innerHTML == 'D') {
+
+                nota[i].innerHTML = '4'
+
+
+            } else if (nota[i].innerHTML == 'D#') {
+
+                nota[i].innerHTML = '#4'
+
+
+            } else if (nota[i].innerHTML == 'Eb') {
+
+                nota[i].innerHTML = 'b5'
+
+
+            } else if (nota[i].innerHTML == 'E') {
+
+                nota[i].innerHTML = '5'
+
+
+            } else if (nota[i].innerHTML == 'E#') {
+
+                nota[i].innerHTML = '#5'
+
+
+            } else if (nota[i].innerHTML == 'F') {
+
+                nota[i].innerHTML = 'b6'
+
+
+            } else if (nota[i].innerHTML == 'F#') {
+
+                nota[i].innerHTML = '6'
+
+
+            } else if (nota[i].innerHTML == 'F##') {
+
+                nota[i].innerHTML = '#6'
+
+
+            } else if (nota[i].innerHTML == 'G') {
+
+                nota[i].innerHTML = 'b7'
+
+
+            } else if (nota[i].innerHTML == 'G#') {
+
+                nota[i].innerHTML = '7'
+
+
+            }
+
+
+        } else if (tonica == 'E') {
+
+
+
+
+            if (nota[i].innerHTML == 'E') {
+
+                nota[i].innerHTML = 'T'
+
+
+            } else if (nota[i].innerHTML == 'F') {
+
+                nota[i].innerHTML = 'b2'
+
+
+            } else if (nota[i].innerHTML == 'F#') {
+
+                nota[i].innerHTML = '2'
+
+
+            } else if (nota[i].innerHTML == 'F##') {
+
+                nota[i].innerHTML = '#2'
+
+
+            } else if (nota[i].innerHTML == 'G') {
+
+                nota[i].innerHTML = 'b3'
+
+
+            } else if (nota[i].innerHTML == 'G#') {
+
+                nota[i].innerHTML = '3'
+
+
+            } else if (nota[i].innerHTML == 'A') {
+
+                nota[i].innerHTML = '4'
+
+
+            } else if (nota[i].innerHTML == 'A#') {
+
+                nota[i].innerHTML = '#4'
+
+
+            } else if (nota[i].innerHTML == 'Bb') {
+
+                nota[i].innerHTML = 'b5'
+
+
+            } else if (nota[i].innerHTML == 'B') {
+
+                nota[i].innerHTML = '5'
+
+
+            } else if (nota[i].innerHTML == 'B#') {
+
+                nota[i].innerHTML = '#5'
+
+
+            } else if (nota[i].innerHTML == 'C') {
+
+                nota[i].innerHTML = 'b6'
+
+
+            } else if (nota[i].innerHTML == 'C#') {
+
+                nota[i].innerHTML = '6'
+
+
+            } else if (nota[i].innerHTML == 'C##') {
+
+                nota[i].innerHTML = '#6'
+
+
+            } else if (nota[i].innerHTML == 'D') {
+
+                nota[i].innerHTML = 'b7'
+
+
+            } else if (nota[i].innerHTML == 'D#') {
+
+                nota[i].innerHTML = '7'
+
+
+            }
+
+
+        } else if (tonica == 'B') {
+
+
+
+
+            if (nota[i].innerHTML == 'B') {
+
+                nota[i].innerHTML = 'T'
+
+
+            } else if (nota[i].innerHTML == 'C') {
+
+                nota[i].innerHTML = 'b2'
+
+
+            } else if (nota[i].innerHTML == 'C#') {
+
+                nota[i].innerHTML = '2'
+
+
+            } else if (nota[i].innerHTML == 'C##') {
+
+                nota[i].innerHTML = '#2'
+
+
+            } else if (nota[i].innerHTML == 'D') {
+
+                nota[i].innerHTML = 'b3'
+
+
+            } else if (nota[i].innerHTML == 'D#') {
+
+                nota[i].innerHTML = '3'
+
+
+            } else if (nota[i].innerHTML == 'E') {
+
+                nota[i].innerHTML = '4'
+
+
+            } else if (nota[i].innerHTML == 'E#') {
+
+                nota[i].innerHTML = '#4'
+
+
+            } else if (nota[i].innerHTML == 'F') {
+
+                nota[i].innerHTML = 'b5'
+
+
+            } else if (nota[i].innerHTML == 'F#') {
+
+                nota[i].innerHTML = '5'
+
+
+            } else if (nota[i].innerHTML == 'F##') {
+
+                nota[i].innerHTML = '#5'
+
+
+            } else if (nota[i].innerHTML == 'G') {
+
+                nota[i].innerHTML = 'b6'
+
+
+            } else if (nota[i].innerHTML == 'G#') {
+
+                nota[i].innerHTML = '6'
+
+
+            } else if (nota[i].innerHTML == 'G##') {
+
+                nota[i].innerHTML = '#6'
+
+
+            } else if (nota[i].innerHTML == 'A') {
+
+                nota[i].innerHTML = 'b7'
+
+
+            } else if (nota[i].innerHTML == 'A#') {
+
+                nota[i].innerHTML = '7'
+
+
+            }
+
+
+        } else if (tonica == 'F') {
+
+
+
+
+            if (nota[i].innerHTML == 'F') {
+
+                nota[i].innerHTML = 'T'
+
+
+            } else if (nota[i].innerHTML == 'F#' || nota[i].innerHTML == 'Gb') {
+
+                nota[i].innerHTML = 'b2'
+
+
+            } else if (nota[i].innerHTML == 'G') {
+
+                nota[i].innerHTML = '2'
+
+
+            } else if (nota[i].innerHTML == 'G#') {
+
+                nota[i].innerHTML = '#2'
+
+
+            } else if (nota[i].innerHTML == 'Ab') {
+
+                nota[i].innerHTML = 'b3'
+
+
+            } else if (nota[i].innerHTML == 'A') {
+
+                nota[i].innerHTML = '3'
+
+
+            } else if (nota[i].innerHTML == 'Bb') {
+
+                nota[i].innerHTML = '4'
+
+
+            } else if (nota[i].innerHTML == 'B') {
+
+                nota[i].innerHTML = '#4'
+
+
+            } else if (nota[i].innerHTML == 'Cb') {
+
+                nota[i].innerHTML = 'b5'
+
+
+            } else if (nota[i].innerHTML == 'C') {
+
+                nota[i].innerHTML = '5'
+
+
+            } else if (nota[i].innerHTML == 'C#') {
+
+                nota[i].innerHTML = '#5'
+
+
+            } else if (nota[i].innerHTML == 'Db') {
+
+                nota[i].innerHTML = 'b6'
+
+
+            } else if (nota[i].innerHTML == 'D') {
+
+                nota[i].innerHTML = '6'
+
+
+            } else if (nota[i].innerHTML == 'D#') {
+
+                nota[i].innerHTML = '#6'
+
+
+            } else if (nota[i].innerHTML == 'Eb') {
+
+                nota[i].innerHTML = 'b7'
+
+
+            } else if (nota[i].innerHTML == 'E') {
+
+                nota[i].innerHTML = '7'
+
+
+            }
+
+
+        } else if (tonica == 'Bb') {
+
+
+
+
+            if (nota[i].innerHTML == 'Bb') {
+
+                nota[i].innerHTML = 'T'
+
+
+            } else if (nota[i].innerHTML == 'B' || nota[i].innerHTML == 'Cb') {
+
+                nota[i].innerHTML = 'b2'
+
+
+            } else if (nota[i].innerHTML == 'C') {
+
+                nota[i].innerHTML = '2'
+
+
+            } else if (nota[i].innerHTML == 'C#') {
+
+                nota[i].innerHTML = '#2'
+
+
+            } else if (nota[i].innerHTML == 'Db') {
+
+                nota[i].innerHTML = 'b3'
+
+
+            } else if (nota[i].innerHTML == 'D') {
+
+                nota[i].innerHTML = '3'
+
+
+            } else if (nota[i].innerHTML == 'Eb') {
+
+                nota[i].innerHTML = '4'
+
+
+            } else if (nota[i].innerHTML == 'E') {
+
+                nota[i].innerHTML = '#4'
+
+
+            } else if (nota[i].innerHTML == 'Fb') {
+
+                nota[i].innerHTML = 'b5'
+
+
+            } else if (nota[i].innerHTML == 'F') {
+
+                nota[i].innerHTML = '5'
+
+
+            } else if (nota[i].innerHTML == 'F#') {
+
+                nota[i].innerHTML = '#5'
+
+
+            } else if (nota[i].innerHTML == 'Gb') {
+
+                nota[i].innerHTML = 'b6'
+
+
+            } else if (nota[i].innerHTML == 'G') {
+
+                nota[i].innerHTML = '6'
+
+
+            } else if (nota[i].innerHTML == 'G#') {
+
+                nota[i].innerHTML = '#6'
+
+
+            } else if (nota[i].innerHTML == 'Ab') {
+
+                nota[i].innerHTML = 'b7'
+
+
+            } else if (nota[i].innerHTML == 'A') {
+
+                nota[i].innerHTML = '7'
+
+
+            }
+
+
+        }
+
+
+
+
 
 
     }
 
-    if (nota[i].innerHTML == 'A#'){
 
-        nota[i].innerHTML = 'Bb'
-
-
-    }
 
 
 }
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+
+function intervaloModos(tonica, modo) {
+
+    intervalos('C')
+
+
+    if (tonica == 'C' && modo == 'jonio') {
+
+        colorNote('T', 'green')
+        colorNote('4', 'yellow')
+        colorNote('#2', 'red')
+        colorNote('b2', 'red')
+        colorNote('b3', 'red')
+        colorNote('#4', 'red')
+        colorNote('b5', 'red')
+        colorNote('#5', 'red')
+        colorNote('b6', 'red')
+        colorNote('#6', 'red')
+        colorNote('b7', 'red')
+
+        for (i = 0; i < nota.length; i++) {
+
+            nota[i].style.display = 'block'
+            nota[i].style.opacity = '1'
+
+
+        }
+
+
+    } else if (tonica == 'C' && modo == 'mixolidio') {
+
+        colorNote('T', 'green')
+        colorNote('#2', 'red')
+        colorNote('b2', 'red')
+        colorNote('b3', 'red')
+        colorNote('#4', 'red')
+        colorNote('b5', 'red')
+        colorNote('#5', 'red')
+        colorNote('b6', 'red')
+        colorNote('7', 'red')
+
+        for (i = 0; i < nota.length; i++) {
+
+            nota[i].style.display = 'block'
+            nota[i].style.opacity = '1'
+
+
+        }
+
+
+    } else if (tonica == 'C' && modo == 'lidio') {
+
+        colorNote('T', 'green')
+        colorNote('#2', 'red')
+        colorNote('b2', 'red')
+        colorNote('b3', 'red')
+        colorNote('4', 'red')
+        colorNote('#5', 'red')
+        colorNote('b6', 'red')
+        colorNote('#6', 'red')
+        colorNote('b7', 'red')
+
+        for (i = 0; i < nota.length; i++) {
+
+            nota[i].style.display = 'block'
+            nota[i].style.opacity = '1'
+
+
+        }
+
+
+    } else if (tonica == 'C' && modo == 'dorico') {
+
+        colorNote('T', 'green')
+        colorNote('b2', 'red')
+        colorNote('3', 'red')
+        colorNote('#4', 'red')
+        colorNote('#5', 'red')
+        colorNote('b6', 'red')
+        colorNote('7', 'red')
+
+        for (i = 0; i < nota.length; i++) {
+
+            nota[i].style.display = 'block'
+            nota[i].style.opacity = '1'
+
+
+        }
+
+
+    } else if (tonica == 'C' && modo == 'eolio') {
+
+        colorNote('T', 'green')
+        colorNote('b2', 'red')
+        colorNote('3', 'red')
+        colorNote('#4', 'red')
+        colorNote('#5', 'red')
+        colorNote('6', 'red')
+        colorNote('7', 'red')
+
+        for (i = 0; i < nota.length; i++) {
+
+            nota[i].style.display = 'block'
+            nota[i].style.opacity = '1'
+
+
+        }
+
+
+    }
+
+
+
+}
+function miniFret() {
+
+    corda[0].style.width = '400px'
+    corda[1].style.width = '400px'
+    corda[2].style.width = '400px'
+    corda[3].style.width = '400px'
+    corda[4].style.width = '400px'
+    corda[5].style.width = '400px'
+
+    traste[6].style.display = 'none'
+    traste[7].style.display = 'none'
+    traste[8].style.display = 'none'
+    traste[9].style.display = 'none'
+    traste[10].style.display = 'none'
+    traste[11].style.display = 'none'
+    traste[12].style.display = 'none'
+    traste[13].style.display = 'none'
+    traste[14].style.display = 'none'
+    fret.style.width = '400px'
+
+    bolinha[3].style.display = 'none'
+    bolinha[4].style.display = 'none'
+    bolinha[2].style.display = 'none'
+    bolinha[5].style.display = 'none'
+    bolinha[6].style.display = 'none'
+
+
+}
+
+//miniFret()
+
+let cordaVetor = ['x', corda1, corda2, corda3, corda4, corda5, corda6]
+
+function tab(x, y) {
+
+    cordaVetor[x][y].style.display = 'block'
+    cordaVetor[x][y].style.opacity = '1'
+
+}
+
+function mostrarTodas(note) {
+
+    for (i = 0; i < nota.length; i++) {
+
+        if (nota[i].innerHTML == note) {
+
+            nota[i].style.display = 'block'
+            nota[i].style.opacity = '1'
+
+
+        }
+
+
+    }
+
+}
+
+function xml(corda, casa, duracao) {
+
+    let tipo
+
+    if (duracao == 1) {
+
+        tipo = 'whole'
+
+
+    } else if (duracao == 2) {
+
+        tipo = 'half'
+
+
+    } else if (duracao == 4) {
+
+        tipo = 'quarter'
+
+
+    } else if (duracao == 8) {
+
+        tipo = 'eighth'
+
+
+    } else if (duracao == 16) {
+
+        tipo = '16th'
+
+
+    } else if (duracao == 32) {
+
+        tipo = '32th'
+
+
+    }
+
+
+    let nota = "<note><duration>1</duration><voice>1</voice><type>" + tipo + "</type><notations><dynamics><f></f></dynamics><technical><string>" + corda + "</string><fret>" + casa + "</fret></technical></notations></note>"
+    console.log(nota + '\n')
+
+}
+
+
+
+let bonus1 = document.getElementById('bonus1')
+
+bonus1.onclick = function () {
+
+    window.location = 'fouraxis.html'
+
+}
+
+function scale(a, b, c, d, e, f, g, h) {
+
+    mostrarTodas(a)
+    mostrarTodas(b)
+    mostrarTodas(c)
+    mostrarTodas(d)
+    mostrarTodas(e)
+    mostrarTodas(f)
+    mostrarTodas(g)
+    mostrarTodas(h)
+
+}
+
+console.log($('.nota')[16].innerHTML)
+
+document.addEventListener('keypress', function (e) {
+
+    if (e.key == 'c') {
+
+        if (cordaAtual == 0) {
+
+            mostrarTodas('C')
+
+
+        } else if (cordaAtual == 1) {
+
+            tab(1, 8)
+
+
+        } else if (cordaAtual == 2) {
+
+            tab(2, 1)
+            tab(2, 13)
+
+
+        } else if (cordaAtual == 3) {
+
+            tab(3, 5)
+
+
+
+        } else if (cordaAtual == 4) {
+
+            tab(4, 10)
+
+
+
+        } else if (cordaAtual == 5) {
+
+            tab(5, 3)
+            tab(5, 15)
+
+
+        } else if (cordaAtual == 6) {
+
+            tab(6, 8)
+
+
+
+        }
+
+
+
+
+    } else if (e.key == 'd') {
+
+        if (cordaAtual == 0) {
+
+            mostrarTodas('D')
+
+
+        } else if (cordaAtual == 1) {
+
+            tab(1, 10)
+
+
+        } else if (cordaAtual == 2) {
+
+            tab(2, 3)
+            tab(2, 15)
+
+
+        } else if (cordaAtual == 3) {
+
+            tab(3, 7)
+
+
+
+        } else if (cordaAtual == 4) {
+
+            tab(4, 12)
+            tab(4, 0)
+
+
+
+        } else if (cordaAtual == 5) {
+
+            tab(5, 5)
+
+
+
+        } else if (cordaAtual == 6) {
+
+            tab(6, 10)
+
+
+
+        }
+
+
+    } else if (e.key == 'e') {
+
+        if (cordaAtual == 0) {
+
+            mostrarTodas('E')
+
+
+        } else if (cordaAtual == 1) {
+
+            tab(1, 0)
+            tab(1, 12)
+
+
+        } else if (cordaAtual == 2) {
+
+            tab(2, 5)
+
+
+
+        } else if (cordaAtual == 3) {
+
+            tab(3, 9)
+
+
+
+        } else if (cordaAtual == 4) {
+
+            tab(4, 2)
+            tab(4, 14)
+
+
+
+        } else if (cordaAtual == 5) {
+
+            tab(5, 7)
+
+
+
+        } else if (cordaAtual == 6) {
+
+            tab(6, 0)
+            tab(6, 12)
+
+
+
+        }
+
+
+    } else if (e.key == 'f') {
+
+        if (cordaAtual == 0) {
+
+            mostrarTodas('F')
+
+
+        } else if (cordaAtual == 1) {
+
+            tab(1, 1)
+            tab(1, 13)
+
+
+        } else if (cordaAtual == 2) {
+
+            tab(2, 6)
+
+
+
+        } else if (cordaAtual == 3) {
+
+            tab(3, 10)
+
+
+
+        } else if (cordaAtual == 4) {
+
+            tab(4, 3)
+            tab(4, 15)
+
+
+
+        } else if (cordaAtual == 5) {
+
+            tab(5, 8)
+
+
+
+        } else if (cordaAtual == 6) {
+
+            tab(6, 1)
+            tab(6, 13)
+
+
+
+        }
+
+
+    } else if (e.key == 'g') {
+
+        if (cordaAtual == 0) {
+
+            mostrarTodas('G')
+
+
+        } else if (cordaAtual == 1) {
+
+            tab(1, 3)
+            tab(1, 15)
+
+
+        } else if (cordaAtual == 2) {
+
+            tab(2, 8)
+
+
+
+        } else if (cordaAtual == 3) {
+
+            tab(3, 0)
+            tab(3, 12)
+
+
+
+        } else if (cordaAtual == 4) {
+
+            tab(4, 5)
+
+
+
+
+        } else if (cordaAtual == 5) {
+
+            tab(5, 10)
+
+
+
+        } else if (cordaAtual == 6) {
+
+            tab(6, 3)
+            tab(6, 15)
+
+
+
+        }
+
+
+    } else if (e.key == 'a') {
+
+        if (cordaAtual == 0) {
+
+            mostrarTodas('A')
+
+
+        } else if (cordaAtual == 1) {
+
+            tab(1, 5)
+
+
+
+        } else if (cordaAtual == 2) {
+
+            tab(2, 10)
+
+
+
+        } else if (cordaAtual == 3) {
+
+            tab(3, 2)
+            tab(3, 14)
+
+
+
+        } else if (cordaAtual == 4) {
+
+            tab(4, 7)
+
+
+
+
+        } else if (cordaAtual == 5) {
+
+            tab(5, 0)
+            tab(5, 12)
+
+
+        } else if (cordaAtual == 6) {
+
+            tab(6, 5)
+
+
+
+
+        }
+
+
+    } else if (e.key == 'b') {
+
+        if (cordaAtual == 0) {
+
+            mostrarTodas('B')
+
+
+        } else if (cordaAtual == 1) {
+
+            tab(1, 7)
+
+
+
+        } else if (cordaAtual == 2) {
+
+            tab(2, 0)
+            tab(2, 12)
+
+
+
+        } else if (cordaAtual == 3) {
+
+            tab(3, 4)
+
+
+
+
+        } else if (cordaAtual == 4) {
+
+            tab(4, 9)
+
+
+
+
+        } else if (cordaAtual == 5) {
+
+            tab(5, 2)
+            tab(5, 14)
+
+
+        } else if (cordaAtual == 6) {
+
+            tab(6, 7)
+
+
+
+
+        }
+
+
+    } else if (e.key == 'C') {
+
+        if (cordaAtual == 0) {
+
+            mostrarTodas('C#')
+
+
+        } else if (cordaAtual == 1) {
+
+            tab(1, 9)
+
+
+        } else if (cordaAtual == 2) {
+
+            tab(2, 2)
+            tab(2, 14)
+
+
+        } else if (cordaAtual == 3) {
+
+            tab(3, 6)
+
+
+
+        } else if (cordaAtual == 4) {
+
+            tab(4, 11)
+
+
+
+        } else if (cordaAtual == 5) {
+
+            tab(5, 4)
+
+
+
+        } else if (cordaAtual == 6) {
+
+            tab(6, 9)
+
+
+
+        }
+
+
+    } else if (e.key == 'D') {
+
+        if (cordaAtual == 0) {
+
+            mostrarTodas('D#')
+
+
+        } else if (cordaAtual == 1) {
+
+            tab(1, 11)
+
+
+        } else if (cordaAtual == 2) {
+
+            tab(2, 4)
+
+
+
+        } else if (cordaAtual == 3) {
+
+            tab(3, 8)
+
+
+
+        } else if (cordaAtual == 4) {
+
+            tab(4, 1)
+            tab(4, 13)
+
+
+
+        } else if (cordaAtual == 5) {
+
+            tab(5, 6)
+
+
+
+        } else if (cordaAtual == 6) {
+
+            tab(6, 11)
+
+
+
+        }
+
+
+    } else if (e.key == 'F') {
+
+        if (cordaAtual == 0) {
+
+            mostrarTodas('F#')
+
+
+        } else if (cordaAtual == 1) {
+
+            tab(1, 2)
+            tab(1, 14)
+
+
+        } else if (cordaAtual == 2) {
+
+            tab(2, 7)
+
+
+
+        } else if (cordaAtual == 3) {
+
+            tab(3, 11)
+
+
+
+        } else if (cordaAtual == 4) {
+
+            tab(4, 4)
+
+
+
+
+        } else if (cordaAtual == 5) {
+
+            tab(5, 9)
+
+
+
+        } else if (cordaAtual == 6) {
+
+            tab(6, 2)
+            tab(6, 14)
+
+
+
+        }
+
+
+    } else if (e.key == 'G') {
+
+        if (cordaAtual == 0) {
+
+            mostrarTodas('G#')
+
+
+        } else if (cordaAtual == 1) {
+
+            tab(1, 4)
+
+
+
+        } else if (cordaAtual == 2) {
+
+            tab(2, 9)
+
+
+
+        } else if (cordaAtual == 3) {
+
+            tab(3, 1)
+            tab(3, 13)
+
+
+
+        } else if (cordaAtual == 4) {
+
+            tab(4, 6)
+
+
+
+
+        } else if (cordaAtual == 5) {
+
+            tab(5, 11)
+
+
+
+        } else if (cordaAtual == 6) {
+
+            tab(6, 4)
+
+
+
+
+        }
+
+
+    } else if (e.key == 'A') {
+
+        if (cordaAtual == 0) {
+
+            mostrarTodas('A#')
+
+
+        } else if (cordaAtual == 1) {
+
+            tab(1, 6)
+
+
+
+        } else if (cordaAtual == 2) {
+
+            tab(2, 11)
+
+
+
+        } else if (cordaAtual == 3) {
+
+            tab(3, 3)
+            tab(3, 15)
+
+
+
+        } else if (cordaAtual == 4) {
+
+            tab(4, 8)
+
+
+
+
+        } else if (cordaAtual == 5) {
+
+            tab(5, 1)
+            tab(5, 13)
+
+
+
+        } else if (cordaAtual == 6) {
+
+            tab(6, 6)
+
+
+
+
+        }
+
+
+    } else if (e.key == '-') {
+
+        apagar()
+
+
+    } else if (e.key == 'p') {
+
+        print(' ', ' ')
+
+        h1.innerHTML = prompt('Título')
+
+
+    } else if (e.key == 'm') {
+
+        miniFret()
+
+
+    } else if (e.key == 'z') {
+
+        enarmonia('C#', 'Db')
+        enarmonia('D#', 'Eb')
+
+        enarmonia('F#', 'Gb')
+
+        enarmonia('G#', 'Ab')
+
+        enarmonia('A#', 'Bb')
+
+
+
+    } else if (e.key == 'x') {
+
+        enarmonia('Db', 'C#')
+        enarmonia('Eb', 'D#')
+
+        enarmonia('Gb', 'F#')
+
+        enarmonia('Ab', 'G#')
+
+        enarmonia('Bb', 'A#')
+
+
+
+    } else if (e.key == '1') {
+
+        resetCorda()
+
+        corda[0].style.backgroundImage = 'none'
+        corda[0].style.backgroundColor = 'red'
+        corda[0].style.animation = 'pisca 0.5s linear infinite'
+        cordaAtual = 1
+
+
+    } else if (e.key == '0') {
+
+        resetCorda()
+        cordaAtual = 0
+
+
+
+
+
+    }
+    else if (e.key == '2') {
+
+        resetCorda()
+        cordaAtual = 2
+
+        corda[1].style.backgroundImage = 'none'
+        corda[1].style.backgroundColor = 'red'
+        corda[1].style.animation = 'pisca 0.5s linear infinite'
+
+
+
+    } else if (e.key == '3') {
+
+        resetCorda()
+        cordaAtual = 3
+
+        corda[2].style.backgroundImage = 'none'
+        corda[2].style.backgroundColor = 'red'
+        corda[2].style.animation = 'pisca 0.5s linear infinite'
+
+
+
+    } else if (e.key == '4') {
+
+        resetCorda()
+        cordaAtual = 4
+
+        corda[3].style.backgroundImage = 'none'
+        corda[3].style.backgroundColor = 'red'
+        corda[3].style.animation = 'pisca 0.5s linear infinite'
+
+
+
+    } else if (e.key == '5') {
+
+        resetCorda()
+        cordaAtual = 5
+
+        corda[4].style.backgroundImage = 'none'
+        corda[4].style.backgroundColor = 'red'
+        corda[4].style.animation = 'pisca 0.5s linear infinite'
+
+
+
+    } else if (e.key == '6') {
+
+        resetCorda()
+        cordaAtual = 6
+
+        corda[5].style.backgroundImage = 'none'
+        corda[5].style.backgroundColor = 'red'
+        corda[5].style.animation = 'pisca 0.5s linear infinite'
+
+
+
+    }
+
+})
+
+
+function resetColor(e) {
+
+    for (i = 0; i < nota.length; i++) {
+
+        if (nota[i].innerHTML == e) {
+
+            nota[i].style.backgroundImage = 'linear-gradient(45deg, greenyellow, rgb(146, 201, 63) , rgb(161, 201, 102), rgb(136, 197, 45) )'
+
+
+        }
+
+
+    }
+
+
+
+}
+
+document.addEventListener('keypress', function (e) {
+
+    console.log(e.key)
+
+})
+
+function print(nomeDaLicao, corpoDaLicao) {
+
+    body.style.backgroundColor = 'white'
+    fret.style.backgroundImage = 'none'
+    fret.style.boxShadow = 'none'
+    limpar.style.display = 'none'
+    mostrar.style.display = 'none'
+    menuH.style.display = 'none'
+    timerSvg.style.display = 'none'
+    camada1.style.display = 'none'
+    barra.style.display = 'none'
+    timer.style.display = 'none'
+    listaSemanas.style.display = 'none'
+    posicao.style.display = 'none'
+    botao0.style.display = 'none'
+    h1.innerHTML = nomeDaLicao
+    tonalidade.style.display = 'none'
+    duracao.style.display = 'none'
+    calendario.style.display = 'none'
+
+    let corpo = document.createElement('p')
+    body.appendChild(corpo)
+    corpo.style.fontFamily = 'arial'
+    corpo.style.fontSize = '40px'
+    corpo.style.position = 'absolute'
+    corpo.style.top = '450px'
+
+    corpo.innerHTML = corpoDaLicao
+
+    let assinatura = document.createElement('p')
+    body.appendChild(assinatura)
+
+    assinatura.innerHTML = 'Prof. Leo Porto'
+    assinatura.style.fontFamily = 'sans-serif'
+    assinatura.style.fontWeight = 'bold'
+
+
+
+}
+
+//print('Brilha Brilha Estrelinha', '0 0 7 7 9 9 7 7 5 5 4 4 2 2 0 <br> 7 7 5 5 4 4 2 <br> 7 7 5 5 4 4 2 <br> 0 0 7 7 9 9 7 7 5 5 4 4 2 2 0')
+
+function resetCorda() {
+
+
+
+    corda[0].style.backgroundImage = 'linear-gradient(to top, rgb(119, 118, 118), rgb(218, 216, 216), black, rgb(161, 153, 153))'
+    corda[1].style.backgroundImage = 'linear-gradient(to top, rgb(119, 118, 118), rgb(218, 216, 216), black, rgb(161, 153, 153))'
+    corda[2].style.backgroundImage = 'linear-gradient(to top, rgb(119, 118, 118), rgb(218, 216, 216), black, rgb(161, 153, 153))'
+    corda[3].style.backgroundImage = 'linear-gradient(to top, rgb(119, 118, 118), rgb(218, 216, 216), black, rgb(161, 153, 153))'
+    corda[4].style.backgroundImage = 'linear-gradient(to top, rgb(119, 118, 118), rgb(218, 216, 216), black, rgb(161, 153, 153))'
+    corda[5].style.backgroundImage = 'linear-gradient(to top, rgb(119, 118, 118), rgb(218, 216, 216), black, rgb(161, 153, 153))'
+
+}
+
+function opacidade(e) {
+
+    for (i = 0; i < nota.length; i++) {
+
+        if (nota[i].innerHTML == e) {
+
+            nota[i].style.opacity = '0.4'
+
+
+        }
+    }
+}
+
+function card(titulo, dica) {
+
+    return {
+
+        titulo,
+        dica,
+        mostrarCard() {
+
+
+            let divCard = document.createElement('div')
+            body.appendChild(divCard)
+            divCard.classList.add('card')
+            console.log('classe adicionada')
+
+            let tituloDica = document.createElement('h1')
+            divCard.appendChild(tituloDica)
+            tituloDica.innerHTML = titulo
+
+            let corpoDica = document.createElement('p')
+            divCard.appendChild(corpoDica)
+            corpoDica.innerHTML = dica
+
+            let fechar = document.createElement('p')
+            divCard.appendChild(fechar)
+
+            fechar.innerHTML = 'X'
+            fechar.style.backgroundColor = 'red'
+            fechar.style.width = '25px'
+            fechar.style.height = '25px'
+            fechar.style.color = 'white'
+            fechar.style.fontWeight = 'bolder'
+            fechar.style.fontFamily = 'arial'
+            fechar.style.position = 'absolute'
+            fechar.style.top = '0px'
+            fechar.style.right = '0px'
+            fechar.style.paddingLeft = '8px'
+            fechar.style.marginRight = '0px'
+            fechar.style.marginTop = '0px'
+
+            let icone = document.createElement('img')
+            divCard.appendChild(icone)
+            icone.src = 'dica.png'
+            icone.style.width = '50px'
+            icone.style.position = 'absolute'
+            icone.style.bottom = '0'
+            icone.style.left = '0'
+            icone.style.marginBottom = '0'
+            icone.style.marginLeft = '0'
+
+            fechar.onclick = function () {
+
+                divCard.style.display = 'none'
+
+            }
+
+        }
+    }
+
+}
+
+let dicaPausa = card('Hora da pausa', 'Uns minutinhos de pausa cairiam bem hein? Tomar uma água, ir ao banheiro, só não vale ir pro facebook, whatsapp e CIA hein. Bons estudos!')
+
+setTimeout(dicaPausa.mostrarCard, 1000*60*30)
+
+
+
+calendario.style.display = 'none'
+
+let cronograma = document.getElementById('cronograma')
+
+cronograma.onchange = function () {
+
+     if(cronograma.value == 'semana1'){
+
+        window.location = 'index.html'
+
+
+     } else if(cronograma.value == 'semana2'){
+
+        window.location = 'semana2.html'
+
+
+     } else if(cronograma.value == 'semana3'){
+
+        window.location = 'semana3.html'
+
+
+     } else if(cronograma.value == 'semana4'){
+
+        window.location = 'semana4.html'
+
+
+     } else if(cronograma.value == 'semana5'){
+
+        window.location = 'semana5.html'
+
+
+     } else if(cronograma.value == 'musica1'){
+
+        window.location = 'still.html'
+
+
+     } else if(cronograma.value == 'bonus1'){
+
+        window.location = 'fouraxis.html'
+
+
+     }
+
+}
+
+document.addEventListener('keypress', function (e) {
+
+    if (e.key == '/'){
+
+        window.location = 'http://localhost:8081'
+
+
+    }
+
+})
 

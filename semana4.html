@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Programa de Estudos</title>
+
+
+    <link id = 'css' rel="stylesheet" href="style4.css">
+
+
+</head>
+
+<body>
+
+
+
+    <header>
+
+        <h1 id='h1'>Programa de Estudos de Guitarra - Semana 4</h1>
+
+
+    </header>
+
+
+
+
+
+
+
+    <abbr title="Lista de Exercícios">
+
+        <div id='menuH'></div>
+        <div id='menuH1'></div>
+    </abbr>
+
+    <div class='linha' id='linha1'></div>
+    <div class='linha' id='linha2'></div>
+    <div class='linha' id='linha3'></div>
+
+
+    <abbr title="Temporizador"><img id='timerSvg' src="timer.svg" alt=""></abbr>
+    <select name="duracao" id="duracao">
+
+        <option value="10">10 min</option>
+        <option value="9">9 min</option>
+        <option value="8">8 min</option>
+        <option value="7">7 min</option>
+        <option value="6">6 min</option>
+        <option value="5">5 min</option>
+        <option value="4">4 min</option>
+        <option value="3">3 min</option>
+        <option value="2">2 min</option>
+        <option value="1">1 min</option>
+
+
+
+    </select>
+
+
+    <abbr title="Pratique o seu ritmo com o metrônomo">
+
+        <div id='camada1'>
+
+
+
+            <abbr title="Tocar"><img id='play' src="play.svg" alt=""></abbr>
+            <audio loop='true' id='click' src="" preload="none"></audio>
+            <div id='andamento'>60 BPM</div>
+            <abbr title="Parar"><img id='pause' src="pause.svg" alt=""></abbr>
+            <abbr title="Diminuir 5 bpm"><img id='menos' src="menos.svg" alt=""></abbr>
+            <abbr title="Aumentar 5 bpm"><img id='mais' src="mais.svg" alt=""></abbr>
+            <abbr title="Treinar com aumento de velocidade"><img id='speed' src="speed.svg" alt=""></abbr>
+
+
+
+
+
+        </div>
+
+
+    </abbr>
+
+    <video id = 'video1' src="" autoplay = 'false' controls></video>
+
+
+    <div id='barra'></div>
+    <div id='timer'></div>
+    <div class="setas" id='esquerda'>
+        <</div> <div class="setas" id='direita'>>
+    </div>
+
+    <audio id='base' src="am.mp3" controls='controls'></audio>
+
+
+
+
+    <div id='pestana'></div>
+
+    <nav>
+
+        <div id='backMenu' class='opcoes'></div>
+
+        <ul class="menu" class='opcoes'>
+
+            <li id='acordes' class='opcoes'>Acordes</li>
+            <li id='arpejos' class='opcoes'>Arpejos</li>
+            <li id='escalas' class='opcoes'>Escalas</li>
+
+        </ul>
+
+    </nav>
+
+    <div id='cordas'>
+
+
+        <abbr title="Corda 1">
+            <p class="corda" id='corda1'></p>
+        </abbr>
+        <abbr title="Corda 2">
+            <p class="corda" id='corda2'></p>
+        </abbr>
+        <abbr title="Corda 3">
+            <p class="corda" id='corda3'></p>
+        </abbr>
+        <abbr title="Corda 4">
+            <p class="corda" id='corda4'></p>
+        </abbr>
+        <abbr title="Corda 5">
+            <p class="corda" id='corda5'></p>
+        </abbr>
+        <abbr title="Corda 6">
+            <p class="corda" id='corda6'></p>
+        </abbr>
+
+
+    </div>
+
+    <div id='trastes'>
+
+        <p class="traste" id='traste1'></p>
+        <p class="traste" id='traste2'></p>
+        <p class="traste" id='traste3'></p>
+        <p class="traste" id='traste4'></p>
+        <p class="traste" id='traste5'></p>
+        <p class="traste" id='traste6'></p>
+        <p class="traste" id='traste7'></p>
+        <p class="traste" id='traste8'></p>
+        <p class="traste" id='traste9'></p>
+        <p class="traste" id='traste10'></p>
+        <p class="traste" id='traste11'></p>
+        <p class="traste" id='traste12'></p>
+        <p class="traste" id='traste13'></p>
+        <p class="traste" id='traste14'></p>
+        <p class="traste" id='traste15'></p>
+
+    </div>
+
+    <abbr id='abrNota' title="">
+
+
+        <div id='corda_6'>
+
+            <abbr title="Mi">
+                <p class="nota" id='corda6_casa0'>E</p>
+            </abbr>
+            <abbr title="Fá">
+                <p class="nota" id='corda6_casa1'>F</p>
+            </abbr>
+            <abbr title="Fá sustenido">
+                <p class="nota" id='corda6_casa2'>F#</p>
+            </abbr>
+            <abbr title="Sol">
+                <p class="nota" id='corda6_casa3'>G</p>
+            </abbr>
+            <abbr title="Sol sustenido">
+                <p class="nota" id='corda6_casa4'>G#</p>
+            </abbr>
+            <abbr title="Lá">
+                <p class="nota" id='corda6_casa5'>A</p>
+            </abbr>
+            <abbr title="Lá sustenido">
+                <p class="nota" id='corda6_casa6'>A#</p>
+            </abbr>
+            <abbr title="Si">
+                <p class="nota" id='corda6_casa7'>B</p>
+            </abbr>
+            <abbr title="Dó">
+                <p class="nota" id='corda6_casa8'>C</p>
+            </abbr>
+            <abbr title="Dó sustenido">
+                <p class="nota" id='corda6_casa9'>C#</p>
+            </abbr>
+            <abbr title="Ré">
+                <p class="nota" id='corda6_casa10'>D</p>
+            </abbr>
+            <abbr title="Ré sustenido">
+                <p class="nota" id='corda6_casa11'>D#</p>
+            </abbr>
+            <abbr title="Mi">
+                <p class="nota" id='corda6_casa12'>E</p>
+            </abbr>
+            <abbr title="Fá">
+                <p class="nota" id='corda6_casa13'>F</p>
+            </abbr>
+            <abbr title="Fá sustenido">
+                <p class="nota" id='corda6_casa14'>F#</p>
+            </abbr>
+            <abbr title="Sol">
+                <p class="nota" id='corda6_casa15'>G</p>
+            </abbr>
+
+        </div>
+
+        <div id='corda_5'>
+
+            <abbr title="Lá">
+                <p class="nota" id='corda5_casa0'>A</p>
+            </abbr>
+            <abbr title="Lá sustenido">
+                <p class="nota" id='corda5_casa1'>A#</p>
+            </abbr>
+            <abbr title="Si">
+                <p class="nota" id='corda5_casa2'>B</p>
+            </abbr>
+            <abbr title="Dó">
+                <p class="nota" id='corda5_casa3'>C</p>
+            </abbr>
+            <abbr title="Dó sustenido">
+                <p class="nota" id='corda5_casa4'>C#</p>
+            </abbr>
+            <abbr title="Ré">
+                <p class="nota" id='corda5_casa5'>D</p>
+            </abbr>
+            <abbr title="Ré sustenido">
+                <p class="nota" id='corda5_casa6'>D#</p>
+            </abbr>
+            <abbr title="Mi">
+                <p class="nota" id='corda5_casa7'>E</p>
+            </abbr>
+            <abbr title="Fá">
+                <p class="nota" id='corda5_casa8'>F</p>
+            </abbr>
+            <abbr title="Fá sustenido">
+                <p class="nota" id='corda5_casa9'>F#</p>
+            </abbr>
+            <abbr title="Sol">
+                <p class="nota" id='corda5_casa10'>G</p>
+            </abbr>
+            <abbr title="Sol sustenido">
+                <p class="nota" id='corda5_casa11'>G#</p>
+            </abbr>
+            <abbr title="Lá">
+                <p class="nota" id='corda5_casa12'>A</p>
+            </abbr>
+            <abbr title="Lá sustenido">
+                <p class="nota" id='corda5_casa13'>A#</p>
+            </abbr>
+            <abbr title="Si">
+                <p class="nota" id='corda5_casa14'>B</p>
+            </abbr>
+            <abbr title="Dó">
+                <p class="nota" id='corda5_casa15'>C</p>
+            </abbr>
+
+        </div>
+
+        <div id='corda_4'>
+
+            <abbr title="Ré">
+                <p class="nota" id='corda4_casa0'>D</p>
+            </abbr>
+            <abbr title="Ré sustenido">
+                <p class="nota" id='corda4_casa1'>D#</p>
+            </abbr>
+            <abbr title="Mi">
+                <p class="nota" id='corda4_casa2'>E</p>
+            </abbr>
+            <abbr title="Fá">
+                <p class="nota" id='corda4_casa3'>F</p>
+            </abbr>
+            <abbr title="Fá sustenido">
+                <p class="nota" id='corda4_casa4'>F#</p>
+            </abbr>
+            <abbr title="Sol">
+                <p class="nota" id='corda4_casa5'>G</p>
+            </abbr>
+            <abbr title="Sol sustenido">
+                <p class="nota" id='corda4_casa6'>G#</p>
+            </abbr>
+            <abbr title="Lá">
+                <p class="nota" id='corda4_casa7'>A</p>
+            </abbr>
+            <abbr title="Lá sustenido">
+                <p class="nota" id='corda4_casa8'>A#</p>
+            </abbr>
+            <abbr title="Si">
+                <p class="nota" id='corda4_casa9'>B</p>
+            </abbr>
+            <abbr title="Dó">
+                <p class="nota" id='corda4_casa10'>C</p>
+            </abbr>
+            <abbr title="Dó sustenido">
+                <p class="nota" id='corda4_casa11'>C#</p>
+            </abbr>
+            <abbr title="Ré">
+                <p class="nota" id='corda4_casa12'>D</p>
+            </abbr>
+            <abbr title="Ré sustenido">
+                <p class="nota" id='corda4_casa13'>D#</p>
+            </abbr>
+            <abbr title="Mi">
+                <p class="nota" id='corda4_casa14'>E</p>
+            </abbr>
+            <abbr title="Fá">
+                <p class="nota" id='corda4_casa15'>F</p>
+            </abbr>
+
+        </div>
+
+        <div id='corda_3'>
+
+            <abbr title="Sol">
+                <p class="nota" id='corda3_casa0'>G</p>
+            </abbr>
+            <abbr title="Sol sustenido">
+                <p class="nota" id='corda3_casa1'>G#</p>
+            </abbr>
+            <abbr title="Lá">
+                <p class="nota" id='corda3_casa2'>A</p>
+            </abbr>
+            <abbr title="Lá sustenido">
+                <p class="nota" id='corda3_casa3'>A#</p>
+            </abbr>
+            <abbr title="Si">
+                <p class="nota" id='corda3_casa4'>B</p>
+            </abbr>
+            <abbr title="Dó">
+                <p class="nota" id='corda3_casa5'>C</p>
+            </abbr>
+            <abbr title="Dó sustenido">
+                <p class="nota" id='corda3_casa6'>C#</p>
+            </abbr>
+            <abbr title="Ré">
+                <p class="nota" id='corda3_casa7'>D</p>
+            </abbr>
+            <abbr title="Ré sustenido">
+                <p class="nota" id='corda3_casa8'>D#</p>
+            </abbr>
+            <abbr title="Mi">
+                <p class="nota" id='corda3_casa9'>E</p>
+            </abbr>
+            <abbr title="Fá">
+                <p class="nota" id='corda3_casa10'>F</p>
+            </abbr>
+            <abbr title="Fá sustenido">
+                <p class="nota" id='corda3_casa11'>F#</p>
+            </abbr>
+            <abbr title="Sol">
+                <p class="nota" id='corda3_casa12'>G</p>
+            </abbr>
+            <abbr title="Sol sustenido">
+                <p class="nota" id='corda3_casa13'>G#</p>
+            </abbr>
+            <abbr title="Lá">
+                <p class="nota" id='corda3_casa14'>A</p>
+            </abbr>
+            <abbr title="Lá sustenido">
+                <p class="nota" id='corda3_casa15'>A#</p>
+            </abbr>
+
+        </div>
+
+        <div id='corda_2'>
+
+            <abbr title="Si">
+                <p class="nota" id='corda2_casa0'>B</p>
+            </abbr>
+            <abbr title="Dó">
+                <p class="nota" id='corda2_casa1'>C</p>
+            </abbr>
+            <abbr title="Dó sustenido">
+                <p class="nota" id='corda2_casa2'>C#</p>
+            </abbr>
+            <abbr title="Ré">
+                <p class="nota" id='corda2_casa3'>D</p>
+            </abbr>
+            <abbr title="Ré sustenido">
+                <p class="nota" id='corda2_casa4'>D#</p>
+            </abbr>
+            <abbr title="Mi">
+                <p class="nota" id='corda2_casa5'>E</p>
+            </abbr>
+            <abbr title="Fá">
+                <p class="nota" id='corda2_casa6'>F</p>
+            </abbr>
+            <abbr title="Fá sustenido">
+                <p class="nota" id='corda2_casa7'>F#</p>
+            </abbr>
+            <abbr title="Sol">
+                <p class="nota" id='corda2_casa8'>G</p>
+            </abbr>
+            <abbr title="Sol sustenido">
+                <p class="nota" id='corda2_casa9'>G#</p>
+            </abbr>
+            <abbr title="Lá">
+                <p class="nota" id='corda2_casa10'>A</p>
+            </abbr>
+            <abbr title="Lá sustenido">
+                <p class="nota" id='corda2_casa11'>A#</p>
+            </abbr>
+            <abbr title="Si">
+                <p class="nota" id='corda2_casa12'>B</p>
+            </abbr>
+            <abbr title="Dó">
+                <p class="nota" id='corda2_casa13'>C</p>
+            </abbr>
+            <abbr title="Dó sustenido">
+                <p class="nota" id='corda2_casa14'>C#</p>
+            </abbr>
+            <abbr title="Ré">
+                <p class="nota" id='corda2_casa15'>D</p>
+            </abbr>
+
+        </div>
+
+        <div id='corda_1'>
+
+            <abbr title="Mi">
+                <p class="nota" id='corda1_casa0'>E</p>
+            </abbr>
+            <abbr title="Fá">
+                <p class="nota" id='corda1_casa1'>F</p>
+            </abbr>
+            <abbr title="Fá sustenido">
+                <p class="nota" id='corda1_casa2'>F#</p>
+            </abbr>
+            <abbr title="Sol">
+                <p class="nota" id='corda1_casa3'>G</p>
+            </abbr>
+            <abbr title="Sol sustenido">
+                <p class="nota" id='corda1_casa4'>G#</p>
+            </abbr>
+            <abbr title="Lá">
+                <p class="nota" id='corda1_casa5'>A</p>
+            </abbr>
+            <abbr title="Lá sustenido">
+                <p class="nota" id='corda1_casa6'>A#</p>
+            </abbr>
+            <abbr title="Si">
+                <p class="nota" id='corda1_casa7'>B</p>
+            </abbr>
+            <abbr title="Dó">
+                <p class="nota" id='corda1_casa8'>C</p>
+            </abbr>
+            <abbr title="Dó sustenido">
+                <p class="nota" id='corda1_casa9'>C#</p>
+            </abbr>
+            <abbr title="Ré">
+                <p class="nota" id='corda1_casa10'>D</p>
+            </abbr>
+            <abbr title="Ré sustenido">
+                <p class="nota" id='corda1_casa11'>D#</p>
+            </abbr>
+            <abbr title="Mi">
+                <p class="nota" id='corda1_casa12'>E</p>
+            </abbr>
+            <abbr title="Fá">
+                <p class="nota" id='corda1_casa13'>F</p>
+            </abbr>
+            <abbr title="Fá sustenido">
+                <p class="nota" id='corda1_casa14'>F#</p>
+            </abbr>
+            <abbr title="Sol">
+                <p class="nota" id='corda1_casa15'>G</p>
+            </abbr>
+
+        </div>
+    </abbr>
+
+    <abbr title="Apaga todas as notas do braço">
+        <div id='limpar'>Limpar</div>
+    </abbr>
+    <abbr title="Mostra todas as notas do braço">
+        <div id='mostrar'>Mostrar Tudo</div>
+    </abbr>
+
+
+
+    <input id='input' type="text">
+    <input type="button" value="Buscar por Cifra" id='botao'>
+
+    <div class="bolinha" id='bolinha1'></div>
+    <div class="bolinha" id='bolinha2'></div>
+    <div class="bolinha" id='bolinha3'></div>
+    <div class="bolinha" id='bolinha4'></div>
+    <div class="bolinha" id='bolinha5'></div>
+    <div class="bolinha" id='bolinha6'></div>
+
+    <!-- <img id = 'fret' src="fret.png" alt="">-->
+
+
+    <select name="tonalidade" id="tonalidade">
+
+        <option value="">Tonalidade</option>
+        <option value="c">C</option>
+        <option value="cs">C#/Db</option>
+        <option value="d">D</option>
+        <option value="ds">D#/Eb</option>
+        <option value="e">E</option>
+        <option value="f">F</option>
+        <option value="fs">F#/Gb</option>
+        <option value="g">G</option>
+        <option value="gs">G#/Ab</option>
+        <option value="a">A</option>
+        <option value="as">A#/Bb</option>
+        <option value="b">B</option>
+
+    </select>
+
+    <select name="estrutura" id="estrutura">
+
+        <option value="">Estrutura</option>
+        <option value="acorde">Acorde</option>
+        <option value="arpejo">Arpejo</option>
+        <option value="escala">Escala</option>
+
+    </select>
+
+    <select name="tipo" id="tipo">
+
+        <option value="">Tipo</option>
+        <option value="maior">Maior</option>
+        <option value="menor">Menor</option>
+        <option value="diminuto">Diminuto</option>
+        <option value="aumentado">Aumentado</option>
+        <option value="7M">7M</option>
+        <option value="7">7</option>
+        <option value="m7">m7</option>
+        <option value="m7b5">m7(b5)</option>
+        <option value="dim">°</option>
+        <option value="m7M">m7M</option>
+        <option value="jonio">Jônio</option>
+        <option value="dorico">Dórico</option>
+        <option value="frigio">Frígio</option>
+        <option value="lidio">Lídio</option>
+        <option value="mixolídio">Mixolídio</option>
+        <option value="eolio">Eólio</option>
+        <option value="locrio">Lócrio</option>
+        <option value="menorHarmonica">Menor Harmônica</option>
+        <option value="menorMelodica">Menor Melódica</option>
+
+    </select>
+
+    <select name="posicao" id="posicao">
+
+        <option value="">Posição</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">Braço Todo</option>
+
+    </select>
+
+    <div id = 'praticarComVideo'>
+
+
+
+        <h2>Praticar com Video</h2>
+        <input id='inputVideo' type="text" placeholder="Cole o código de incorporação">
+        <input type="button" value="Ok" id='botao1'>
+
+    </div>
+
+    <input type="button" value="Ok" id='botao0'>
+
+
+
+
+    <iframe id='video' width="560" height="315"
+        src="https://www.youtube.com/embed/L9_L8iiJJAk" frameborder="0"
+        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+    <h1 id='listaEx'>Lista de Exercícios</h1>
+
+    <abbr title="Lição Concluída"><img id = 'concluido1' src="concluido.svg" alt=""></abbr>
+    <abbr title="Marcar Lição Como Concluída"><div id = 'naoConcluido1'></div></abbr>
+
+    <abbr title="Lição Concluída"><img id = 'concluido2' src="concluido.svg" alt=""></abbr>
+    <abbr title="Marcar Lição Como Concluída"><div id = 'naoConcluido2'></div></abbr>
+
+    <abbr title="Lição Concluída"><img id = 'concluido3' src="concluido.svg" alt=""></abbr>
+    <abbr title="Marcar Lição Como Concluída"><div id = 'naoConcluido3'></div></abbr>
+
+    <abbr title="Lição Concluída"><img id = 'concluido4' src="concluido.svg" alt=""></abbr>
+    <abbr title="Marcar Lição Como Concluída"><div id = 'naoConcluido4'></div></abbr>
+
+    <abbr title="Lição Concluída"><img id = 'concluido5' src="concluido.svg" alt=""></abbr>
+    <abbr title="Marcar Lição Como Concluída"><div id = 'naoConcluido5'></div></abbr>
+
+
+
+
+    <ul id='lista'>
+
+
+
+
+        <li class="lista" id='ex1'>Exercício de Precisão 4</li>
+        <li class="lista" id='ex2'>7 shapes da escala de Am harmônica com salto de corda</li>
+        <li class="lista" id='ex3'>Arpejos tríades do campo de Am harmônico com ligados na horizontal</li>
+        <li class="lista" id='ex4'>Arpejos tétrades do campo de Am harmônico com ligados na horizontal</li>
+        <li class="lista" id='ex5'>Praticar improvisação com a escala de Am harmônica, saltos + arpejos</li>
+
+
+
+
+    </ul>
+
+
+    <ul id='listaSemanas'>
+
+        <li class="lista" id='still'>Música do mês</li>
+        <li class="lista" id='semana1'>Semana 1</li>
+        <li class="lista" id='semana2'>Semana 2</li>
+        <li class="lista" id='semana3'>Semana 3</li>
+        <li class="lista" id='bonus1'>Bônus 1 (4 axes)</li>
+        <li class="lista" id='semana4'>Semana 4</li>
+
+
+
+    </ul>
+
+
+    <select name="" id ="cronograma">
+
+        <option value="">Cronograma</option>
+        <option value="semana1">Semana 1</option>
+        <option value="semana2">Semana 2</option>
+        <option value="semana3">Semana 3</option>
+        <option value="semana4">Semana 4</option>
+        <option value="semana5">Semana 5</option>
+        <option value="musica1">Música 1</option>
+        <option value="bonus1">Bônus - 4 axes</option>
+
+
+    </select>
+
+
+
+
+
+    <div id='moldura'></div>
+
+    <button id='posicao1'>Posição 1</button>
+    <button id='posicao2'>Posição 2</button>
+    <button id='posicao3'>Posição 3</button>
+    <button id='posicao4'>Posição 4</button>
+    <button id='posicao5'>Posição 5</button>
+
+    <iframe id='pdf' src="precisao4.pdf" frameborder="0" width="800px" height="800px"></iframe>
+
+    <div id='fret'></div>
+
+    <abbr title="Acessar todas as listas de estudo"><img id = 'calendario' src="calendario.svg" alt=""></abbr>
+    <iframe id = 'soundslice' src="https://www.soundslice.com/slices/ygZVc/embed-channelpost/" width="90%" height="320" frameBorder="0"></iframe>
+
+
+
+
+
+
+</body>
+<script src="script4.js"></script>
+
+</html>
